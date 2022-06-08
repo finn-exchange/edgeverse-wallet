@@ -1,10 +1,11 @@
 package io.novafoundation.nova.common.view
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.ContextThemeWrapper
-import androidx.annotation.ColorInt
 import androidx.appcompat.widget.AppCompatTextView
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
 import com.github.razir.progressbutton.bindProgressButton
 import com.github.razir.progressbutton.hideProgress
@@ -14,13 +15,7 @@ import io.novafoundation.nova.common.R
 import io.novafoundation.nova.common.presentation.DescriptiveButtonState
 import io.novafoundation.nova.common.utils.doOnGlobalLayout
 import io.novafoundation.nova.common.utils.dp
-import io.novafoundation.nova.common.utils.getColorFromAttr
-import io.novafoundation.nova.common.utils.getEnum
 import io.novafoundation.nova.common.utils.setVisible
-import io.novafoundation.nova.common.utils.useAttributes
-import io.novafoundation.nova.common.view.shape.addRipple
-import io.novafoundation.nova.common.view.shape.getCornersStateDrawable
-import io.novafoundation.nova.common.view.shape.getRoundedCornerDrawableFromColors
 
 enum class ButtonState {
     NORMAL,
@@ -38,31 +33,13 @@ class PrimaryButton @JvmOverloads constructor(
     enum class Appearance {
 
         PRIMARY {
-            override fun disabledColor(context: Context) = context.getColor(R.color.disabledColor)
-
-            override fun enabledColor(context: Context) = context.getColorFromAttr(R.attr.colorAccent)
-        },
-        PRIMARY_TRANSPARENT {
-            override fun disabledColor(context: Context) = context.getColor(R.color.disabledTransparent)
-
-            override fun enabledColor(context: Context) = context.getColorFromAttr(R.attr.colorAccent)
-        },
-        SECONDARY {
-            override fun disabledColor(context: Context) = context.getColor(R.color.disabledColor)
-
-            override fun enabledColor(context: Context) = context.getColor(R.color.accentSecondary)
-        },
-        SECONDARY_TRANSPARENT {
-            override fun disabledColor(context: Context) = context.getColor(R.color.disabledTransparent)
-
-            override fun enabledColor(context: Context) = context.getColor(R.color.white_16)
+            override fun buttonBackgroundDrawable(context: Context): Drawable? {
+                return ContextCompat.getDrawable(context, R.drawable.bg_button_primary_selector)
+            }
         };
 
-        @ColorInt
-        abstract fun disabledColor(context: Context): Int
+        abstract fun buttonBackgroundDrawable(context: Context): Drawable?
 
-        @ColorInt
-        abstract fun enabledColor(context: Context): Int
     }
 
     enum class Size(val heightDp: Int, val cornerSizeDp: Int) {
@@ -74,20 +51,7 @@ class PrimaryButton @JvmOverloads constructor(
     private var preparedForProgress = false
 
     init {
-        attrs?.let(this::applyAttrs)
-    }
-
-    private fun applyAttrs(attrs: AttributeSet) = context.useAttributes(attrs, R.styleable.PrimaryButton) { typedArray ->
-        val appearance = typedArray.getEnum(R.styleable.PrimaryButton_appearance, Appearance.PRIMARY)
-        val size = typedArray.getEnum(R.styleable.PrimaryButton_size, Size.LARGE)
-
-        setConfiguration(size, appearance)
-    }
-
-    fun setConfiguration(size: Size, appearance: Appearance) {
-        setSize(size)
-
-        setAppearance(appearance, cornerSizeDp = size.cornerSizeDp)
+        setAppearance(Appearance.PRIMARY)
     }
 
     fun prepareForProgress(lifecycleOwner: LifecycleOwner) {
@@ -117,18 +81,8 @@ class PrimaryButton @JvmOverloads constructor(
         }
     }
 
-    private fun setAppearance(appearance: Appearance, cornerSizeDp: Int) = with(context) {
-        val activeState = getRoundedCornerDrawableFromColors(appearance.enabledColor(this), cornerSizeInDp = cornerSizeDp)
-        val baseBackground = getCornersStateDrawable(
-            disabledDrawable = getRoundedCornerDrawableFromColors(appearance.disabledColor(this), cornerSizeInDp = cornerSizeDp),
-            focusedDrawable = activeState,
-            idleDrawable = activeState
-        )
-
-        val rippleColor = getColorFromAttr(R.attr.colorControlHighlight)
-        val background = addRipple(baseBackground, rippleColor = rippleColor)
-
-        setBackground(background)
+    private fun setAppearance(appearance: Appearance) {
+        background = appearance.buttonBackgroundDrawable(context)
     }
 
     private fun checkPreparedForProgress() {

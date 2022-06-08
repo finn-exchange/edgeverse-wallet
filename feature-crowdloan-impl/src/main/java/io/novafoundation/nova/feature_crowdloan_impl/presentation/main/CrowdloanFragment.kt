@@ -13,6 +13,7 @@ import io.novafoundation.nova.common.presentation.LoadingState
 import io.novafoundation.nova.common.utils.setVisible
 import io.novafoundation.nova.common.view.shape.addRipple
 import io.novafoundation.nova.common.view.shape.getBlurDrawable
+import io.novafoundation.nova.common.view.shape.getCutCornersStateDrawable
 import io.novafoundation.nova.feature_crowdloan_api.data.network.blockhain.binding.ParaId
 import io.novafoundation.nova.feature_crowdloan_api.di.CrowdloanFeatureApi
 import io.novafoundation.nova.feature_crowdloan_impl.R
@@ -54,8 +55,8 @@ class CrowdloanFragment : BaseFragment<CrowdloanViewModel>(), CrowdloanAdapter.H
         crowdloanList.adapter = adapter
 
         with(requireContext()) {
-            crowdloanAbout.background = getBlurDrawable()
-            crowdloanMyContributions.background = addRipple(getBlurDrawable())
+            crowdloanAbout.background = getCutCornersStateDrawable()
+            crowdloanMyContributions.background = getCutCornersStateDrawable()
         }
 
         crowdloanMyContributions.setOnClickListener { viewModel.myContributionsClicked() }

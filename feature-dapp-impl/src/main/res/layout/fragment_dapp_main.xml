@@ -11,7 +11,7 @@
         android:id="@+id/dappMainContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:background="@drawable/drawable_background_image">
+        android:background="@color/black">
 
         <TextView
             android:id="@+id/dappMainTitle"
@@ -60,6 +60,7 @@
             android:layout_marginEnd="24dp"
             android:gravity="center"
             android:text="@string/dapp_main_welcome_title"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@id/dappMainWelcomeGroup"
             app:layout_constraintStart_toStartOf="@id/dappMainWelcomeGroup"
             app:layout_constraintTop_toTopOf="@id/dappMainWelcomeGroup" />

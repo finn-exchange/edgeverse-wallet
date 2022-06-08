@@ -3,21 +3,16 @@ package io.novafoundation.nova.feature_assets.presentation.balance.list.view
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import io.novafoundation.nova.feature_assets.R
 import io.novafoundation.nova.common.address.AddressModel
+import io.novafoundation.nova.common.utils.dp
 import io.novafoundation.nova.common.utils.inflateChild
 import io.novafoundation.nova.common.utils.setVisible
-import io.novafoundation.nova.common.view.shape.addRipple
-import io.novafoundation.nova.common.view.shape.getRoundedCornerDrawable
+import io.novafoundation.nova.common.view.shape.getCutCornersStateDrawable
+import io.novafoundation.nova.feature_assets.R
 import io.novafoundation.nova.feature_assets.presentation.balance.list.model.NftPreviewUi
 import io.novafoundation.nova.feature_assets.presentation.balance.list.model.TotalBalanceModel
 import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.item_asset_header.view.balanceListAssetPlaceholder
-import kotlinx.android.synthetic.main.item_asset_header.view.balanceListAvatar
-import kotlinx.android.synthetic.main.item_asset_header.view.balanceListManage
-import kotlinx.android.synthetic.main.item_asset_header.view.balanceListNfts
-import kotlinx.android.synthetic.main.item_asset_header.view.balanceListTotalBalance
-import kotlinx.android.synthetic.main.item_asset_header.view.balanceListTotalTitle
+import kotlinx.android.synthetic.main.item_asset_header.view.*
 
 class AssetsHeaderAdapter(private val handler: Handler) : RecyclerView.Adapter<HeaderHolder>() {
 
@@ -98,10 +93,6 @@ class HeaderHolder(
 
     init {
         with(containerView) {
-            balanceListManage.background = with(context) {
-                addRipple(getRoundedCornerDrawable(R.color.black_48, cornerSizeInDp = 20))
-            }
-
             balanceListManage.setOnClickListener { handler.manageClicked() }
             balanceListAvatar.setOnClickListener { handler.avatarClicked() }
             balanceListNfts.setOnClickListener { handler.goToNftsClicked() }
@@ -131,6 +122,7 @@ class HeaderHolder(
     fun bindTotalBalance(totalBalance: TotalBalanceModel?) = totalBalance?.let {
         with(containerView) {
             balanceListTotalBalance.showTotalBalance(totalBalance)
+            balanceListTotalBalance.background = context.getCutCornersStateDrawable()
             balanceListAssetPlaceholder.setVisible(it.shouldShowPlaceholder)
         }
     }

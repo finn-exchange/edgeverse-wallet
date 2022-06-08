@@ -99,12 +99,6 @@ class ValidatorDetailsViewModel(
         }
     }
 
-    fun twitterClicked() {
-        validator.identity?.twitter?.let {
-            showBrowser(appLinksProvider.getTwitterAccountUrl(it))
-        }
-    }
-
     fun accountActionsClicked() = launch {
         val address = validatorDetails.first().addressModel.address
         val chain = selectedAssetState.chain()

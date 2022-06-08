@@ -1,6 +1,5 @@
 package io.novafoundation.nova.common.utils
 
-import android.graphics.Typeface
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.TextPaint
@@ -9,7 +8,7 @@ import android.view.View
 
 private fun clickableSpan(onClick: () -> Unit) = object : ClickableSpan() {
     override fun updateDrawState(ds: TextPaint) {
-        ds.typeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD)
+        super.updateDrawState(ds)
         ds.isUnderlineText = false
     }
 

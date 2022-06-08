@@ -35,12 +35,12 @@
         app:layout_constraintTop_toBottomOf="@id/balanceListTotalTitle" />
 
     <io.novafoundation.nova.feature_assets.presentation.balance.list.view.GoToNftsView
+        android:id="@+id/balanceListNfts"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:id="@+id/balanceListNfts"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/balanceListTotalBalance" />
 
     <TextView
@@ -50,6 +50,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:layout_marginBottom="16dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp"
         android:text="@string/wallet_assets"
         app:layout_constraintBottom_toTopOf="@+id/balanceListAssetPlaceholder"
         app:layout_constraintStart_toStartOf="parent"

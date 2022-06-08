@@ -75,18 +75,6 @@ class SettingsViewModel(
         router.openChangePinCode()
     }
 
-    fun telegramClicked() {
-        openLink(appLinksProvider.telegram)
-    }
-
-    fun twitterClicked() {
-        openLink(appLinksProvider.twitter)
-    }
-
-    fun rateUsClicked() {
-        openLink(appLinksProvider.rateApp)
-    }
-
     fun websiteClicked() {
         openLink(appLinksProvider.website)
     }
@@ -101,14 +89,6 @@ class SettingsViewModel(
 
     fun privacyClicked() {
         openLink(appLinksProvider.privacyUrl)
-    }
-
-    fun emailClicked() {
-        _openEmailEvent.value = appLinksProvider.email.event()
-    }
-
-    fun openYoutube() {
-        openLink(appLinksProvider.youtube)
     }
 
     fun accountActionsClicked() = launch {

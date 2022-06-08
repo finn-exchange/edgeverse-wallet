@@ -6,11 +6,7 @@ import com.neovisionaries.ws.client.WebSocketFactory
 import dagger.Module
 import dagger.Provides
 import io.novafoundation.nova.common.BuildConfig
-import io.novafoundation.nova.common.data.network.AndroidLogger
-import io.novafoundation.nova.common.data.network.AppLinksProvider
-import io.novafoundation.nova.common.data.network.HttpExceptionHandler
-import io.novafoundation.nova.common.data.network.NetworkApiCreator
-import io.novafoundation.nova.common.data.network.TimeHeaderInterceptor
+import io.novafoundation.nova.common.data.network.*
 import io.novafoundation.nova.common.data.network.rpc.SocketSingleRequestExecutor
 import io.novafoundation.nova.common.di.scope.ApplicationScope
 import io.novafoundation.nova.common.mixin.api.NetworkStateMixin
@@ -40,16 +36,9 @@ class NetworkModule {
             termsUrl = BuildConfig.TERMS_URL,
             privacyUrl = BuildConfig.PRIVACY_URL,
             payoutsLearnMore = BuildConfig.PAYOUTS_LEARN_MORE,
-            twitterAccountTemplate = BuildConfig.TWITTER_ACCOUNT_TEMPLATE,
             setControllerLearnMore = BuildConfig.SET_CONTROLLER_LEARN_MORE,
-            recommendedValidatorsLearnMore = BuildConfig.RECOMMENDED_VALIDATORS_LEARN_MORE,
-            telegram = BuildConfig.TELEGRAM_URL,
-            twitter = BuildConfig.TWITTER_URL,
-            rateApp = BuildConfig.RATE_URL,
             website = BuildConfig.WEBSITE_URL,
-            github = BuildConfig.GITHUB_URL,
-            email = BuildConfig.EMAIL,
-            youtube = BuildConfig.YOUTUBE_URL
+            github = BuildConfig.GITHUB_URL
         )
     }
 

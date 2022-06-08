@@ -5,9 +5,10 @@ import android.text.InputType
 import android.util.AttributeSet
 import android.view.View
 import android.widget.EditText
+import androidx.core.content.res.getIntOrThrow
 import com.google.android.material.textfield.TextInputLayout
 import io.novafoundation.nova.common.R
-import io.novafoundation.nova.common.view.shape.getCornersStateDrawable
+import io.novafoundation.nova.common.view.shape.getCutCornersStateDrawable
 
 class InputField @JvmOverloads constructor(
     context: Context,
@@ -21,7 +22,7 @@ class InputField @JvmOverloads constructor(
     init {
         View.inflate(context, R.layout.view_input_field, this)
 
-        content.background = context.getCornersStateDrawable()
+        content.background = context.getCutCornersStateDrawable()
 
         attrs?.let(::applyAttributes)
     }

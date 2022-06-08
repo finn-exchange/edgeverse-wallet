@@ -4,26 +4,17 @@ import android.view.View
 import android.view.ViewGroup
 import coil.ImageLoader
 import coil.load
-import io.novafoundation.nova.feature_assets.R
-import io.novafoundation.nova.common.list.BaseGroupedDiffCallback
-import io.novafoundation.nova.common.list.GroupedListAdapter
-import io.novafoundation.nova.common.list.GroupedListHolder
-import io.novafoundation.nova.common.list.PayloadGenerator
-import io.novafoundation.nova.common.list.resolvePayload
+import io.novafoundation.nova.common.list.*
 import io.novafoundation.nova.common.utils.format
 import io.novafoundation.nova.common.utils.formatAsCurrency
 import io.novafoundation.nova.common.utils.inflateChild
 import io.novafoundation.nova.common.utils.setTextColorRes
+import io.novafoundation.nova.common.view.shape.getCutCornersStateDrawable
+import io.novafoundation.nova.feature_assets.R
 import io.novafoundation.nova.feature_assets.presentation.balance.list.model.AssetGroupUi
 import io.novafoundation.nova.feature_assets.presentation.model.AssetModel
-import kotlinx.android.synthetic.main.item_asset.view.itemAssetBalance
-import kotlinx.android.synthetic.main.item_asset.view.itemAssetDollarAmount
-import kotlinx.android.synthetic.main.item_asset.view.itemAssetImage
-import kotlinx.android.synthetic.main.item_asset.view.itemAssetRate
-import kotlinx.android.synthetic.main.item_asset.view.itemAssetRateChange
-import kotlinx.android.synthetic.main.item_asset.view.itemAssetToken
-import kotlinx.android.synthetic.main.item_asset_group.view.itemAssetGroupBalance
-import kotlinx.android.synthetic.main.item_asset_group.view.itemAssetGroupChain
+import kotlinx.android.synthetic.main.item_asset.view.*
+import kotlinx.android.synthetic.main.item_asset_group.view.*
 import java.math.BigDecimal
 
 val dollarRateExtractor = { assetModel: AssetModel -> assetModel.token.dollarRate }
@@ -91,6 +82,8 @@ class AssetViewHolder(
 ) : GroupedListHolder(containerView) {
 
     fun bind(asset: AssetModel, itemHandler: BalanceListAdapter.ItemAssetHandler) = with(containerView) {
+        background = context.getCutCornersStateDrawable()
+
         itemAssetImage.load(asset.token.configuration.iconUrl, imageLoader)
 
         bindDollarInfo(asset)
@@ -102,6 +95,7 @@ class AssetViewHolder(
         itemAssetToken.text = asset.token.configuration.symbol
 
         setOnClickListener { itemHandler.assetClicked(asset) }
+
     }
 
     fun bindTotal(asset: AssetModel) {

@@ -6,7 +6,6 @@ import io.novafoundation.nova.common.data.network.AppLinksProvider
 import io.novafoundation.nova.common.mixin.api.Browserable
 import io.novafoundation.nova.common.resources.ResourceManager
 import io.novafoundation.nova.common.utils.Event
-import io.novafoundation.nova.common.utils.event
 import io.novafoundation.nova.common.utils.flowOf
 import io.novafoundation.nova.feature_staking_impl.R
 import io.novafoundation.nova.feature_staking_impl.domain.StakingInteractor
@@ -88,7 +87,5 @@ class StartChangeValidatorsViewModel(
         router.back()
     }
 
-    fun recommendedLearnMoreClicked() {
-        openBrowserEvent.value = appLinksProvider.recommendedValidatorsLearnMore.event()
-    }
+    fun recommendedLearnMoreClicked() {}
 }

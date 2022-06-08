@@ -24,19 +24,7 @@ import io.novafoundation.nova.feature_staking_impl.di.StakingFeatureComponent
 import io.novafoundation.nova.feature_staking_impl.presentation.validators.details.model.ValidatorAlert
 import io.novafoundation.nova.feature_staking_impl.presentation.validators.parcel.ValidatorDetailsParcelModel
 import io.novafoundation.nova.feature_wallet_api.presentation.view.showAmount
-import kotlinx.android.synthetic.main.fragment_validator_details.validatorAccountInfo
-import kotlinx.android.synthetic.main.fragment_validator_details.validatorDetailsContainer
-import kotlinx.android.synthetic.main.fragment_validator_details.validatorDetailsToolbar
-import kotlinx.android.synthetic.main.fragment_validator_details.validatorIdentity
-import kotlinx.android.synthetic.main.fragment_validator_details.validatorIdentityElementName
-import kotlinx.android.synthetic.main.fragment_validator_details.validatorIdentityEmail
-import kotlinx.android.synthetic.main.fragment_validator_details.validatorIdentityLegalName
-import kotlinx.android.synthetic.main.fragment_validator_details.validatorIdentityTwitter
-import kotlinx.android.synthetic.main.fragment_validator_details.validatorIdentityWeb
-import kotlinx.android.synthetic.main.fragment_validator_details.validatorStakingEstimatedReward
-import kotlinx.android.synthetic.main.fragment_validator_details.validatorStakingNominators
-import kotlinx.android.synthetic.main.fragment_validator_details.validatorStakingStatus
-import kotlinx.android.synthetic.main.fragment_validator_details.validatorStakingTotalStake
+import kotlinx.android.synthetic.main.fragment_validator_details.*
 
 class ValidatorDetailsFragment : BaseFragment<ValidatorDetailsViewModel>() {
 
@@ -68,8 +56,8 @@ class ValidatorDetailsFragment : BaseFragment<ValidatorDetailsViewModel>() {
         validatorStakingTotalStake.setOnClickListener { viewModel.totalStakeClicked() }
 
         validatorIdentityEmail.setOnClickListener { viewModel.emailClicked() }
+
         validatorIdentityWeb.setOnClickListener { viewModel.webClicked() }
-        validatorIdentityTwitter.setOnClickListener { viewModel.twitterClicked() }
 
         validatorAccountInfo.setOnClickListener { viewModel.accountActionsClicked() }
     }

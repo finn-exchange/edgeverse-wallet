@@ -4,11 +4,7 @@ import android.view.View
 import android.view.ViewGroup
 import coil.ImageLoader
 import coil.clear
-import io.novafoundation.nova.common.list.BaseGroupedDiffCallback
-import io.novafoundation.nova.common.list.GroupedListAdapter
-import io.novafoundation.nova.common.list.GroupedListHolder
-import io.novafoundation.nova.common.list.PayloadGenerator
-import io.novafoundation.nova.common.list.resolvePayload
+import io.novafoundation.nova.common.list.*
 import io.novafoundation.nova.common.utils.images.setIcon
 import io.novafoundation.nova.common.utils.inflateChild
 import io.novafoundation.nova.common.utils.makeGone
@@ -16,20 +12,13 @@ import io.novafoundation.nova.common.utils.makeVisible
 import io.novafoundation.nova.common.utils.setTextColorRes
 import io.novafoundation.nova.common.view.shape.addRipple
 import io.novafoundation.nova.common.view.shape.getBlurDrawable
+import io.novafoundation.nova.common.view.shape.getCutCornersStateDrawable
 import io.novafoundation.nova.feature_crowdloan_api.data.network.blockhain.binding.ParaId
 import io.novafoundation.nova.feature_crowdloan_impl.R
 import io.novafoundation.nova.feature_crowdloan_impl.presentation.main.model.CrowdloanModel
 import io.novafoundation.nova.feature_crowdloan_impl.presentation.main.model.CrowdloanStatusModel
-import kotlinx.android.synthetic.main.item_crowdloan.view.itemCrowdloanArrow
-import kotlinx.android.synthetic.main.item_crowdloan.view.itemCrowdloanIcon
-import kotlinx.android.synthetic.main.item_crowdloan.view.itemCrowdloanParaDescription
-import kotlinx.android.synthetic.main.item_crowdloan.view.itemCrowdloanParaName
-import kotlinx.android.synthetic.main.item_crowdloan.view.itemCrowdloanParaRaised
-import kotlinx.android.synthetic.main.item_crowdloan.view.itemCrowdloanParaRaisedPercentage
-import kotlinx.android.synthetic.main.item_crowdloan.view.itemCrowdloanParaRaisedProgress
-import kotlinx.android.synthetic.main.item_crowdloan.view.itemCrowdloanTimeRemaining
-import kotlinx.android.synthetic.main.item_crowdloan_group.view.itemCrowdloanGroupCounter
-import kotlinx.android.synthetic.main.item_crowdloan_group.view.itemCrowdloanGroupStatus
+import kotlinx.android.synthetic.main.item_crowdloan.view.*
+import kotlinx.android.synthetic.main.item_crowdloan_group.view.*
 
 class CrowdloanAdapter(
     private val imageLoader: ImageLoader,
@@ -117,6 +106,7 @@ private class CrowdloanChildHolder(
         item: CrowdloanModel,
         handler: CrowdloanAdapter.Handler,
     ) = with(containerView) {
+        background = context?.getCutCornersStateDrawable()
         itemCrowdloanParaDescription.text = item.description
         itemCrowdloanParaName.text = item.title
 

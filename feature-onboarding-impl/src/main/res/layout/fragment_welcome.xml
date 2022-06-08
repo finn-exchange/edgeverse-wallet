@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/novabg_welcome_screen">
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/back"
@@ -12,6 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/bg_primary_list_item"
+        android:contentDescription="@null"
         android:padding="@dimen/x2"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,9 +21,11 @@
 
     <ImageView
         android:id="@+id/logoImg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/drawable_nova_logo"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        android:layout_marginHorizontal="24dp"
+        android:contentDescription="@null"
+        android:src="@drawable/img_edgeware"
         app:layout_constraintBottom_toTopOf="@id/buttonsView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,19 +44,17 @@
 
         <io.novafoundation.nova.common.view.PrimaryButton
             android:id="@+id/createAccountBtn"
-            style="@style/Widget.Nova.Button.Iconic"
+            style="@style/Widget.Nova.Button.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/ic_add_circle"
             android:layout_margin="@dimen/x1"
             android:text="@string/onboarding_create_wallet" />
 
         <io.novafoundation.nova.common.view.PrimaryButton
             android:id="@+id/importAccountBtn"
-            style="@style/Widget.Nova.Button.Iconic"
+            style="@style/Widget.Nova.Button.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/ic_key"
             android:layout_margin="@dimen/x1"
             android:text="@string/onboarding_restore_wallet" />
 

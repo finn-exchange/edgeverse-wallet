@@ -6,14 +6,7 @@
         android:id="@+id/walletFragment"
         android:enabled="true"
         android:icon="@drawable/bottom_assets"
-        android:title="@string/wallet_assets"
-        app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/crowdloanFragment"
-        android:enabled="true"
-        android:icon="@drawable/bottom_crodwloans"
-        android:title="@string/crowdloan_crowdloan"
+        android:title="@string/wallet"
         app:showAsAction="ifRoom" />
 
     <item
@@ -24,16 +17,10 @@
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/stakingFragment"
-        android:enabled="true"
-        android:icon="@drawable/bottom_staking"
-        android:title="@string/tabbar_staking_title"
-        app:showAsAction="ifRoom" />
-
-    <item
         android:id="@+id/profileFragment"
         android:enabled="true"
         android:icon="@drawable/bottom_settings"
         android:title="@string/profile_settings_title"
         app:showAsAction="ifRoom" />
+
 </menu>

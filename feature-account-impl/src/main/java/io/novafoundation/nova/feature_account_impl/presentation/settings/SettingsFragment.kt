@@ -12,22 +12,7 @@ import io.novafoundation.nova.common.utils.sendEmailIntent
 import io.novafoundation.nova.feature_account_api.di.AccountFeatureApi
 import io.novafoundation.nova.feature_account_impl.R
 import io.novafoundation.nova.feature_account_impl.di.AccountFeatureComponent
-import kotlinx.android.synthetic.main.fragment_profile.accountView
-import kotlinx.android.synthetic.main.fragment_profile.settingsAppVersion
-import kotlinx.android.synthetic.main.fragment_profile.settingsContainer
-import kotlinx.android.synthetic.main.fragment_profile.settingsEmail
-import kotlinx.android.synthetic.main.fragment_profile.settingsGithub
-import kotlinx.android.synthetic.main.fragment_profile.settingsLanguage
-import kotlinx.android.synthetic.main.fragment_profile.settingsNetworks
-import kotlinx.android.synthetic.main.fragment_profile.settingsPin
-import kotlinx.android.synthetic.main.fragment_profile.settingsPrivacy
-import kotlinx.android.synthetic.main.fragment_profile.settingsRateUs
-import kotlinx.android.synthetic.main.fragment_profile.settingsTelegram
-import kotlinx.android.synthetic.main.fragment_profile.settingsTerms
-import kotlinx.android.synthetic.main.fragment_profile.settingsTwitter
-import kotlinx.android.synthetic.main.fragment_profile.settingsWallets
-import kotlinx.android.synthetic.main.fragment_profile.settingsWebsite
-import kotlinx.android.synthetic.main.fragment_profile.settingsYoutube
+import kotlinx.android.synthetic.main.fragment_profile.*
 
 class SettingsFragment : BaseFragment<SettingsViewModel>() {
 
@@ -45,23 +30,24 @@ class SettingsFragment : BaseFragment<SettingsViewModel>() {
         accountView.setWholeClickListener { viewModel.accountActionsClicked() }
 
         settingsWallets.setOnClickListener { viewModel.walletsClicked() }
+
         settingsNetworks.setOnClickListener { viewModel.networksClicked() }
 
         settingsLanguage.setOnClickListener { viewModel.languagesClicked() }
 
-        settingsTelegram.setOnClickListener { viewModel.telegramClicked() }
-        settingsTwitter.setOnClickListener { viewModel.twitterClicked() }
-        settingsYoutube.setOnClickListener { viewModel.openYoutube() }
-
         settingsWebsite.setOnClickListener { viewModel.websiteClicked() }
+
         settingsGithub.setOnClickListener { viewModel.githubClicked() }
+
         settingsTerms.setOnClickListener { viewModel.termsClicked() }
+
         settingsPrivacy.setOnClickListener { viewModel.privacyClicked() }
 
-        settingsEmail.setOnClickListener { viewModel.emailClicked() }
-        settingsRateUs.setOnClickListener { viewModel.rateUsClicked() }
-
         settingsPin.setOnClickListener { viewModel.changePinCodeClicked() }
+
+        settingsCurrency.setOnClickListener {
+            // TODO to implement
+        }
     }
 
     override fun inject() {
@@ -86,8 +72,6 @@ class SettingsFragment : BaseFragment<SettingsViewModel>() {
         viewModel.selectedLanguageFlow.observe {
             settingsLanguage.setValue(it.displayName)
         }
-
-        viewModel.appVersionFlow.observe(settingsAppVersion::setText)
 
         viewModel.openEmailEvent.observeEvent { requireContext().sendEmailIntent(it) }
     }
