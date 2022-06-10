@@ -31,7 +31,7 @@ import io.novafoundation.nova.feature_wallet_impl.data.mappers.mapNodeToOperatio
 import io.novafoundation.nova.feature_wallet_impl.data.mappers.mapOperationLocalToOperation
 import io.novafoundation.nova.feature_wallet_impl.data.mappers.mapOperationToOperationLocalDb
 import io.novafoundation.nova.feature_wallet_impl.data.network.blockchain.SubstrateRemoteSource
-import io.novafoundation.nova.feature_wallet_impl.data.network.coingecko.CoingeckoApi
+import io.novafoundation.nova.common.data.network.coingecko.CoingeckoApi
 import io.novafoundation.nova.feature_wallet_impl.data.network.model.request.SubqueryHistoryRequest
 import io.novafoundation.nova.feature_wallet_impl.data.network.phishing.PhishingApi
 import io.novafoundation.nova.feature_wallet_impl.data.network.subquery.SubQueryOperationsApi

@@ -636,4 +636,5 @@
     <string name="wallet_your_balance">Ваш баланс</string>
     <string name="yesterday">Вчера</string>
     <string name="wallet">Кошельки</string>
+    <string name="common_currency">Валюта</string>
 </resources>
