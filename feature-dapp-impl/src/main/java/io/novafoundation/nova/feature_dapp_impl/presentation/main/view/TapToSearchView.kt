@@ -7,6 +7,7 @@ import androidx.appcompat.widget.AppCompatTextView
 import io.novafoundation.nova.common.utils.WithContextExtensions
 import io.novafoundation.nova.common.utils.setDrawableStart
 import io.novafoundation.nova.common.utils.setTextColorRes
+import io.novafoundation.nova.common.view.shape.getCutCornersStateDrawable
 import io.novafoundation.nova.feature_dapp_impl.R
 
 class TapToSearchView @JvmOverloads constructor(
@@ -33,6 +34,6 @@ class TapToSearchView @JvmOverloads constructor(
         text = context.getString(R.string.dapp_search_hint)
         setTextColorRes(R.color.white_48)
 
-        background = addRipple(getRoundedCornerDrawable(R.color.black_48))
+        background = context.getCutCornersStateDrawable()
     }
 }

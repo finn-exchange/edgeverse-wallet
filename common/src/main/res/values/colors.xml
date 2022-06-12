@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#004CB7</color>
-    <color name="colorPrimaryDark">#80004CB7</color>
-    <color name="colorSelected">@color/colorPrimaryDark</color>
+    <color name="colorPrimary">#FF009A</color>
+    <color name="colorPrimaryDark">#FF009A</color>
+    <color name="colorSelected">#80FF009A</color>
     <color name="colorAccent">#FF009A</color>
+    <color name="colorAccent_50">#80FF009A</color>
     <color name="white">#fff</color>
     <color name="colorHint">#ccc</color>
     <color name="black">#000</color>
@@ -57,7 +58,7 @@
 
     <color name="bar_bg_64">#A8252528</color>
 
-    <color name="accentBlue">#409DF3</color>
+    <color name="accentBlue">@color/colorAccent</color>
     <color name="accentSecondary">#2D2D30</color>
 
     <color name="disabledColor">#1D1D20</color>

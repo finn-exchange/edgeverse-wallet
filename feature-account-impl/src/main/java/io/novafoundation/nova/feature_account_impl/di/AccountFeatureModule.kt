@@ -4,12 +4,16 @@ import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import io.novafoundation.nova.common.address.AddressIconGenerator
+import io.novafoundation.nova.common.data.network.NetworkApiCreator
+import io.novafoundation.nova.common.data.network.coingecko.CoingeckoApi
 import io.novafoundation.nova.common.data.network.rpc.SocketSingleRequestExecutor
 import io.novafoundation.nova.common.data.secrets.v1.SecretStoreV1
 import io.novafoundation.nova.common.data.secrets.v2.SecretStoreV2
 import io.novafoundation.nova.common.data.storage.Preferences
 import io.novafoundation.nova.common.data.storage.encrypt.EncryptedPreferences
 import io.novafoundation.nova.common.di.scope.FeatureScope
+import io.novafoundation.nova.common.domain.GetAvailableFiatCurrencies
+import io.novafoundation.nova.common.domain.SelectedFiat
 import io.novafoundation.nova.common.resources.ClipboardManager
 import io.novafoundation.nova.common.resources.LanguagesHolder
 import io.novafoundation.nova.common.resources.ResourceManager
@@ -270,4 +274,19 @@ class AccountFeatureModule {
     ): WalletUiUseCase {
         return WalletUiUseCaseImpl(accountRepository, addressIconGenerator)
     }
+
+    @Provides
+    @FeatureScope
+    fun provideCoingeckoApi(networkApiCreator: NetworkApiCreator): CoingeckoApi {
+        return networkApiCreator.create(CoingeckoApi::class.java)
+    }
+
+    @Provides
+    @FeatureScope
+    fun provideAvailableFiatCurrenciesUseCase(coingeckoApi: CoingeckoApi) = GetAvailableFiatCurrencies(coingeckoApi)
+
+    @Provides
+    @FeatureScope
+    fun provideSelectedFiatUseCase(preferences: Preferences) = SelectedFiat(preferences)
+
 }

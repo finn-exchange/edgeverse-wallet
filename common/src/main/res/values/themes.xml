@@ -8,7 +8,6 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:windowTranslucentNavigation">false</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:windowBackground">@drawable/bg_splash</item>
         <item name="android:navigationBarColor">@color/black</item>
 
         <!--text sizes-->
@@ -38,7 +37,7 @@
         <item name="fontExtraLight">@font/public_sans_extra_light</item>
         <!--fonts-->
 
-        <item name="colorAccent">@color/accentBlue</item>
+        <item name="colorAccent">@color/colorAccent</item>
 
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
 

@@ -11,6 +11,7 @@ import io.novafoundation.nova.common.utils.getEnum
 import io.novafoundation.nova.common.utils.useAttributes
 import io.novafoundation.nova.common.view.shape.addRipple
 import io.novafoundation.nova.common.view.shape.getBlurDrawable
+import io.novafoundation.nova.common.view.shape.getCutCornersStateDrawable
 import io.novafoundation.nova.common.view.shape.getIdleDrawable
 import io.novafoundation.nova.feature_wallet_api.R
 import io.novafoundation.nova.feature_wallet_api.presentation.model.AssetModel
@@ -25,38 +26,14 @@ class AssetSelectorView @JvmOverloads constructor(
     defStyle: Int = 0,
 ) : ConstraintLayout(context, attrs, defStyle) {
 
-    enum class BackgroundStyle {
-        BLURRED, BORDERED
-    }
-
     init {
         View.inflate(context, R.layout.view_asset_selector, this)
 
-        attrs?.let {
-            applyAttributes(it)
-        }
-    }
-
-    private fun applyAttributes(attributes: AttributeSet) = context.useAttributes(attributes, R.styleable.AssetSelectorView) {
-        val backgroundStyle: BackgroundStyle = it.getEnum(R.styleable.AssetSelectorView_backgroundStyle, BackgroundStyle.BORDERED)
-
-        val actionIcon = it.getDrawable(R.styleable.AssetSelectorView_actionIcon)
-        actionIcon?.let(::setActionIcon)
-
-        setBackgroundStyle(backgroundStyle)
+        background = context.getCutCornersStateDrawable()
     }
 
     fun setActionIcon(drawable: Drawable) {
         assetSelectorAction.setImageDrawable(drawable)
-    }
-
-    fun setBackgroundStyle(style: BackgroundStyle) = with(context) {
-        val baseBackground = when (style) {
-            BackgroundStyle.BLURRED -> getBlurDrawable()
-            BackgroundStyle.BORDERED -> getIdleDrawable()
-        }
-
-        background = addRipple(baseBackground)
     }
 
     fun onClick(action: (View) -> Unit) {

@@ -2,16 +2,19 @@ package io.novafoundation.nova.feature_account_impl.presentation.settings
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import io.novafoundation.nova.common.address.AddressIconGenerator
 import io.novafoundation.nova.common.base.BaseViewModel
 import io.novafoundation.nova.common.data.network.AppLinksProvider
+import io.novafoundation.nova.common.data.network.coingecko.FiatChooserEvent
+import io.novafoundation.nova.common.data.network.coingecko.FiatCurrency
+import io.novafoundation.nova.common.domain.GetAvailableFiatCurrencies
+import io.novafoundation.nova.common.domain.SelectedFiat
 import io.novafoundation.nova.common.mixin.api.Browserable
 import io.novafoundation.nova.common.resources.AppVersionProvider
 import io.novafoundation.nova.common.resources.ResourceManager
-import io.novafoundation.nova.common.utils.Event
-import io.novafoundation.nova.common.utils.event
-import io.novafoundation.nova.common.utils.flowOf
-import io.novafoundation.nova.common.utils.inBackground
+import io.novafoundation.nova.common.utils.*
+import io.novafoundation.nova.common.view.bottomSheet.list.dynamic.DynamicListBottomSheet
 import io.novafoundation.nova.feature_account_api.domain.interfaces.AccountInteractor
 import io.novafoundation.nova.feature_account_impl.R
 import io.novafoundation.nova.feature_account_impl.presentation.AccountRouter
@@ -25,10 +28,13 @@ class SettingsViewModel(
     private val interactor: AccountInteractor,
     private val router: AccountRouter,
     private val appLinksProvider: AppLinksProvider,
-    private val resourceManager: ResourceManager,
-    private val appVersionProvider: AppVersionProvider,
     private val addressIconGenerator: AddressIconGenerator,
+    private val getAvailableFiatCurrencies: GetAvailableFiatCurrencies,
+    private val selectedFiat: SelectedFiat
 ) : BaseViewModel(), Browserable {
+
+    private val _showFiatChooser = MutableLiveData<FiatChooserEvent>()
+    val showFiatChooser: LiveData<FiatChooserEvent> = _showFiatChooser
 
     val selectedAccountFlow = interactor.selectedMetaAccountFlow()
         .inBackground()
@@ -48,11 +54,8 @@ class SettingsViewModel(
         .inBackground()
         .share()
 
-    val appVersionFlow = flowOf {
-        resourceManager.getString(R.string.about_version_template, appVersionProvider.versionName)
-    }
-        .inBackground()
-        .share()
+    @OptIn(ExperimentalStdlibApi::class)
+    val selectedFiatLiveData: LiveData<String> = selectedFiat.flow().asLiveData().map { it.uppercase() }
 
     override val openBrowserEvent = MutableLiveData<Event<String>>()
 
@@ -75,18 +78,6 @@ class SettingsViewModel(
         router.openChangePinCode()
     }
 
-    fun telegramClicked() {
-        openLink(appLinksProvider.telegram)
-    }
-
-    fun twitterClicked() {
-        openLink(appLinksProvider.twitter)
-    }
-
-    fun rateUsClicked() {
-        openLink(appLinksProvider.rateApp)
-    }
-
     fun websiteClicked() {
         openLink(appLinksProvider.website)
     }
@@ -103,16 +94,24 @@ class SettingsViewModel(
         openLink(appLinksProvider.privacyUrl)
     }
 
-    fun emailClicked() {
-        _openEmailEvent.value = appLinksProvider.email.event()
-    }
-
-    fun openYoutube() {
-        openLink(appLinksProvider.youtube)
-    }
-
     fun accountActionsClicked() = launch {
         router.openAccountDetails(selectedAccountFlow.first().id)
+    }
+
+    fun currencyClicked() {
+        viewModelScope.launch {
+            val currencies = getAvailableFiatCurrencies()
+            if (currencies.isEmpty()) return@launch
+            val selected = selectedFiat.get()
+            val selectedItem = currencies.first { it.id == selected }
+            _showFiatChooser.value = FiatChooserEvent(DynamicListBottomSheet.Payload(currencies, selectedItem))
+        }
+    }
+
+    fun onFiatSelected(item: FiatCurrency) {
+        viewModelScope.launch {
+            selectedFiat.set(item.id)
+        }
     }
 
     private fun openLink(link: String) {

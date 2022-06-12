@@ -4,32 +4,25 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import coil.ImageLoader
 import io.novafoundation.nova.common.base.BaseFragment
+import io.novafoundation.nova.common.data.network.coingecko.FiatCurrency
 import io.novafoundation.nova.common.di.FeatureUtils
 import io.novafoundation.nova.common.mixin.impl.observeBrowserEvents
+import io.novafoundation.nova.common.presentation.FiatCurrenciesChooserBottomSheetDialog
 import io.novafoundation.nova.common.utils.applyStatusBarInsets
 import io.novafoundation.nova.common.utils.sendEmailIntent
+import io.novafoundation.nova.common.view.bottomSheet.list.dynamic.DynamicListBottomSheet
 import io.novafoundation.nova.feature_account_api.di.AccountFeatureApi
 import io.novafoundation.nova.feature_account_impl.R
 import io.novafoundation.nova.feature_account_impl.di.AccountFeatureComponent
-import kotlinx.android.synthetic.main.fragment_profile.accountView
-import kotlinx.android.synthetic.main.fragment_profile.settingsAppVersion
-import kotlinx.android.synthetic.main.fragment_profile.settingsContainer
-import kotlinx.android.synthetic.main.fragment_profile.settingsEmail
-import kotlinx.android.synthetic.main.fragment_profile.settingsGithub
-import kotlinx.android.synthetic.main.fragment_profile.settingsLanguage
-import kotlinx.android.synthetic.main.fragment_profile.settingsNetworks
-import kotlinx.android.synthetic.main.fragment_profile.settingsPin
-import kotlinx.android.synthetic.main.fragment_profile.settingsPrivacy
-import kotlinx.android.synthetic.main.fragment_profile.settingsRateUs
-import kotlinx.android.synthetic.main.fragment_profile.settingsTelegram
-import kotlinx.android.synthetic.main.fragment_profile.settingsTerms
-import kotlinx.android.synthetic.main.fragment_profile.settingsTwitter
-import kotlinx.android.synthetic.main.fragment_profile.settingsWallets
-import kotlinx.android.synthetic.main.fragment_profile.settingsWebsite
-import kotlinx.android.synthetic.main.fragment_profile.settingsYoutube
+import kotlinx.android.synthetic.main.fragment_profile.*
+import javax.inject.Inject
 
 class SettingsFragment : BaseFragment<SettingsViewModel>() {
+
+    @Inject
+    protected lateinit var imageLoader: ImageLoader
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,23 +38,22 @@ class SettingsFragment : BaseFragment<SettingsViewModel>() {
         accountView.setWholeClickListener { viewModel.accountActionsClicked() }
 
         settingsWallets.setOnClickListener { viewModel.walletsClicked() }
+
         settingsNetworks.setOnClickListener { viewModel.networksClicked() }
 
         settingsLanguage.setOnClickListener { viewModel.languagesClicked() }
 
-        settingsTelegram.setOnClickListener { viewModel.telegramClicked() }
-        settingsTwitter.setOnClickListener { viewModel.twitterClicked() }
-        settingsYoutube.setOnClickListener { viewModel.openYoutube() }
-
         settingsWebsite.setOnClickListener { viewModel.websiteClicked() }
+
         settingsGithub.setOnClickListener { viewModel.githubClicked() }
+
         settingsTerms.setOnClickListener { viewModel.termsClicked() }
+
         settingsPrivacy.setOnClickListener { viewModel.privacyClicked() }
 
-        settingsEmail.setOnClickListener { viewModel.emailClicked() }
-        settingsRateUs.setOnClickListener { viewModel.rateUsClicked() }
-
         settingsPin.setOnClickListener { viewModel.changePinCodeClicked() }
+
+        settingsCurrency.setOnClickListener { viewModel.currencyClicked() }
     }
 
     override fun inject() {
@@ -87,8 +79,18 @@ class SettingsFragment : BaseFragment<SettingsViewModel>() {
             settingsLanguage.setValue(it.displayName)
         }
 
-        viewModel.appVersionFlow.observe(settingsAppVersion::setText)
+        viewModel.showFiatChooser.observeEvent(::showFiatChooser)
+
+        viewModel.selectedFiatLiveData.observe {
+            settingsCurrency.setValue(it)
+        }
+
 
         viewModel.openEmailEvent.observeEvent { requireContext().sendEmailIntent(it) }
     }
+
+    private fun showFiatChooser(payload: DynamicListBottomSheet.Payload<FiatCurrency>) {
+        FiatCurrenciesChooserBottomSheetDialog(requireContext(), imageLoader, payload, viewModel::onFiatSelected).show()
+    }
+
 }

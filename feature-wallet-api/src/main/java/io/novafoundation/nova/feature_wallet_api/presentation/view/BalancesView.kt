@@ -10,10 +10,10 @@ import io.novafoundation.nova.common.utils.setTextColorRes
 import io.novafoundation.nova.common.utils.updatePadding
 import io.novafoundation.nova.common.utils.useAttributes
 import io.novafoundation.nova.common.view.TableCellView
-import io.novafoundation.nova.common.view.shape.getBlurDrawable
+import io.novafoundation.nova.common.view.shape.getCutCornersStateDrawable
 import io.novafoundation.nova.feature_wallet_api.R
 import io.novafoundation.nova.feature_wallet_api.presentation.model.AmountModel
-import kotlinx.android.synthetic.main.view_balances.view.viewBalancesTitle
+import kotlinx.android.synthetic.main.view_balances.view.*
 
 abstract class BalancesView @JvmOverloads constructor(
     context: Context,
@@ -38,7 +38,7 @@ abstract class BalancesView @JvmOverloads constructor(
             applyAttributes(it)
         }
 
-        background = context.getBlurDrawable()
+        background = context.getCutCornersStateDrawable()
     }
 
     private fun applyAttributes(attributes: AttributeSet) = context.useAttributes(attributes, R.styleable.BalancesView) {

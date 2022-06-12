@@ -16,8 +16,7 @@ import io.novafoundation.nova.app.root.di.RootComponent
 import io.novafoundation.nova.common.base.BaseFragment
 import io.novafoundation.nova.common.di.FeatureUtils
 import io.novafoundation.nova.common.utils.updatePadding
-import kotlinx.android.synthetic.main.fragment_main.bottomNavHost
-import kotlinx.android.synthetic.main.fragment_main.bottomNavigationView
+import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainFragment : BaseFragment<MainViewModel>() {
 
@@ -83,11 +82,7 @@ class MainFragment : BaseFragment<MainViewModel>() {
             .inject(this)
     }
 
-    override fun subscribe(viewModel: MainViewModel) {
-        viewModel.stakingAvailableLiveData.observe {
-            bottomNavigationView.menu.findItem(R.id.stakingFragment).isVisible = it
-        }
-    }
+    override fun subscribe(viewModel: MainViewModel) {}
 
     private fun isAtHomeTab(destination: NavDestination) =
         destination.id == navController!!.graph.startDestination

@@ -10,8 +10,8 @@ import io.novafoundation.nova.common.address.AddressIconGenerator
 import io.novafoundation.nova.common.data.network.AppLinksProvider
 import io.novafoundation.nova.common.di.viewmodel.ViewModelKey
 import io.novafoundation.nova.common.di.viewmodel.ViewModelModule
-import io.novafoundation.nova.common.resources.AppVersionProvider
-import io.novafoundation.nova.common.resources.ResourceManager
+import io.novafoundation.nova.common.domain.GetAvailableFiatCurrencies
+import io.novafoundation.nova.common.domain.SelectedFiat
 import io.novafoundation.nova.feature_account_api.domain.interfaces.AccountInteractor
 import io.novafoundation.nova.feature_account_impl.presentation.AccountRouter
 import io.novafoundation.nova.feature_account_impl.presentation.settings.SettingsViewModel
@@ -26,17 +26,17 @@ class SettingsModule {
         interactor: AccountInteractor,
         router: AccountRouter,
         appLinksProvider: AppLinksProvider,
-        resourceManager: ResourceManager,
-        appVersionProvider: AppVersionProvider,
         addressIconGenerator: AddressIconGenerator,
+        getAvailableFiatCurrencies: GetAvailableFiatCurrencies,
+        selectedFiat: SelectedFiat,
     ): ViewModel {
         return SettingsViewModel(
             interactor,
             router,
             appLinksProvider,
-            resourceManager,
-            appVersionProvider,
-            addressIconGenerator
+            addressIconGenerator,
+            getAvailableFiatCurrencies,
+            selectedFiat
         )
     }
 

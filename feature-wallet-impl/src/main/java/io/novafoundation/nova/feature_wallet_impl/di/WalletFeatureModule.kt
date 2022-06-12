@@ -28,7 +28,7 @@ import io.novafoundation.nova.feature_wallet_impl.data.network.blockchain.Substr
 import io.novafoundation.nova.feature_wallet_impl.data.network.blockchain.WssSubstrateSource
 import io.novafoundation.nova.feature_wallet_impl.data.network.blockchain.updaters.BalancesUpdateSystem
 import io.novafoundation.nova.feature_wallet_impl.data.network.blockchain.updaters.balance.PaymentUpdaterFactory
-import io.novafoundation.nova.feature_wallet_impl.data.network.coingecko.CoingeckoApi
+import io.novafoundation.nova.common.data.network.coingecko.CoingeckoApi
 import io.novafoundation.nova.feature_wallet_impl.data.network.phishing.PhishingApi
 import io.novafoundation.nova.feature_wallet_impl.data.network.subquery.SubQueryOperationsApi
 import io.novafoundation.nova.feature_wallet_impl.data.repository.RuntimeWalletConstants
