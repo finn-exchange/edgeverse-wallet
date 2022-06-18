@@ -57,6 +57,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     implementation daggerDep
+    testImplementation project(path: ':feature-nft-impl')
     kapt daggerKapt
 
     implementation roomDep

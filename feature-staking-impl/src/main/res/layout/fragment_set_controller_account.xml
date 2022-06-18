@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:background="@color/black">
 
-    <io.novafoundation.nova.common.view.Toolbar
+    <com.dfinn.wallet.common.view.Toolbar
         android:id="@+id/setControllerToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
             android:paddingStart="16dp"
             android:paddingEnd="16dp">
 
-            <io.novafoundation.nova.common.view.AdvertisementCard
+            <com.dfinn.wallet.common.view.AdvertisementCard
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -40,7 +40,7 @@
                 app:subtitle="@string/staking_set_controller_subtitle"
                 app:title="@string/staking_set_controller_title" />
 
-            <io.novafoundation.nova.common.view.AlertView
+            <com.dfinn.wallet.common.view.AlertView
                 android:id="@+id/setControllerSwitchToStashWarning"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
                 android:layout_marginTop="4dp"
                 android:text="@string/staking_stash_can_hint_v2_2_0" />
 
-            <io.novafoundation.nova.feature_account_api.view.AddressView
+            <com.dfinn.wallet.feature_account_api.view.AddressView
                 android:id="@+id/setControllerStash"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
                 android:layout_marginTop="4dp"
                 android:text="@string/staking_controller_can_hint_v2_2_0" />
 
-            <io.novafoundation.nova.feature_account_api.view.AddressView
+            <com.dfinn.wallet.feature_account_api.view.AddressView
                 android:id="@+id/setControllerController"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <io.novafoundation.nova.common.view.PrimaryButton
+    <com.dfinn.wallet.common.view.PrimaryButton
         android:id="@+id/setControllerContinue"
         style="@style/Widget.Nova.Button.Primary"
         android:layout_width="match_parent"

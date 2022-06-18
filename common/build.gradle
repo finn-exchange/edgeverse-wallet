@@ -68,6 +68,7 @@ dependencies {
     implementation viewModelKtxDep
 
     implementation daggerDep
+    testImplementation project(path: ':common')
     kapt daggerKapt
 
     implementation lifecycleDep

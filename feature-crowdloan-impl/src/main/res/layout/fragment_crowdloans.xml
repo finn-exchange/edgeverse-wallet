@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <io.novafoundation.nova.feature_wallet_api.presentation.view.AssetSelectorView
+        <com.dfinn.wallet.feature_wallet_api.presentation.view.AssetSelectorView
             android:id="@+id/crowdloanAssetSelector"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
             app:layout_constraintTop_toBottomOf="@id/crowdloanAboutTitle"
             tools:text="@string/crowdloan_main_description_v2_2_0" />
 
-        <io.novafoundation.nova.common.view.GoNextView
+        <com.dfinn.wallet.common.view.GoNextView
             android:id="@+id/crowdloanMyContributions"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
             tools:listitem="@layout/item_crowdloan"
             tools:visibility="visible" />
 
-        <io.novafoundation.nova.common.view.PlaceholderView
+        <com.dfinn.wallet.common.view.PlaceholderView
             android:id="@+id/crowdloanPlaceholder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

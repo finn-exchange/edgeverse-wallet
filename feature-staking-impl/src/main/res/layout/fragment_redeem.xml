@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:background="@color/black">
 
-    <io.novafoundation.nova.common.view.Toolbar
+    <com.dfinn.wallet.common.view.Toolbar
         android:id="@+id/redeemToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         app:titleText="@string/staking_redeem" />
 
 
-    <io.novafoundation.nova.feature_wallet_api.presentation.view.amount.PrimaryAmountView
+    <com.dfinn.wallet.feature_wallet_api.presentation.view.amount.PrimaryAmountView
         android:id="@+id/redeemAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp" />
 
-    <io.novafoundation.nova.feature_wallet_api.presentation.view.extrinsic.GenericExtrinsicInformationView
+    <com.dfinn.wallet.feature_wallet_api.presentation.view.extrinsic.GenericExtrinsicInformationView
         android:id="@+id/redeemExtrinsicInformation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <io.novafoundation.nova.common.view.PrimaryButton
+    <com.dfinn.wallet.common.view.PrimaryButton
         android:id="@+id/redeemConfirm"
         style="@style/Widget.Nova.Button.Primary"
         android:layout_width="match_parent"

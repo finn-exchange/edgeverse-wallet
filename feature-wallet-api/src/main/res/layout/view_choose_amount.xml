@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <io.novafoundation.nova.feature_wallet_api.presentation.view.amount.ChooseAmountInputView
+    <com.dfinn.wallet.feature_wallet_api.presentation.view.amount.ChooseAmountInputView
         android:id="@+id/chooseAmountInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

@@ -1,0 +1,11 @@
+package com.dfinn.wallet.feature_staking_impl.domain.validations.rebond
+
+import com.dfinn.wallet.common.validation.Validation
+import com.dfinn.wallet.common.validation.ValidationSystem
+import com.dfinn.wallet.feature_wallet_api.domain.validation.PositiveAmountValidation
+import com.dfinn.wallet.feature_wallet_api.domain.validation.EnoughToPayFeesValidation
+
+typealias RebondFeeValidation = EnoughToPayFeesValidation<RebondValidationPayload, RebondValidationFailure>
+typealias NotZeroRebondValidation = PositiveAmountValidation<RebondValidationPayload, RebondValidationFailure>
+typealias RebondValidation = Validation<RebondValidationPayload, RebondValidationFailure>
+typealias RebondValidationSystem = ValidationSystem<RebondValidationPayload, RebondValidationFailure>

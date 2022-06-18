@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/importAccountFragment"
-        android:name="io.novafoundation.nova.feature_account_impl.presentation.importing.ImportAccountFragment"
+        android:name="com.dfinn.wallet.feature_account_impl.presentation.importing.ImportAccountFragment"
         android:label="fragment_import"
         tools:layout="@layout/fragment_import_account">
 
@@ -27,14 +27,14 @@
 
     <fragment
         android:id="@+id/pincodeFragment"
-        android:name="io.novafoundation.nova.feature_account_impl.presentation.pincode.PincodeFragment"
+        android:name="com.dfinn.wallet.feature_account_impl.presentation.pincode.PincodeFragment"
         android:label="fragment_pincode"
         tools:layout="@layout/fragment_pincode" />
 
     <fragment
         android:id="@+id/advancedEncryptionFragment"
         tools:layout="@layout/fragment_advanced_encryption"
-        android:name="io.novafoundation.nova.feature_account_impl.presentation.account.advancedEncryption.AdvancedEncryptionFragment"
+        android:name="com.dfinn.wallet.feature_account_impl.presentation.account.advancedEncryption.AdvancedEncryptionFragment"
         android:label="AdvancedEncryptionFragment" />
 
     <action

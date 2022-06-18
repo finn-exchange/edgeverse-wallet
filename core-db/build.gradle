@@ -55,6 +55,7 @@ dependencies {
     implementation coroutinesDep
 
     implementation daggerDep
+    androidTestImplementation project(path: ':core-db')
     kapt daggerKapt
 
     implementation roomDep

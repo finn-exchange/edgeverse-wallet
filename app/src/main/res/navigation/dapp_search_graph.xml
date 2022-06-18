@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/dappSearchFragment"
-        android:name="io.novafoundation.nova.feature_dapp_impl.presentation.search.DappSearchFragment"
+        android:name="com.dfinn.wallet.feature_dapp_impl.presentation.search.DappSearchFragment"
         android:label="DappSearchFragment"
         tools:layout="@layout/fragment_search_dapp">
 

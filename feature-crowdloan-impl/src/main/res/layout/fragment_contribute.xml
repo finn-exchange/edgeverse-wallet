@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:background="@color/black">
 
-    <io.novafoundation.nova.common.view.Toolbar
+    <com.dfinn.wallet.common.view.Toolbar
         android:id="@+id/crowdloanContributeToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
                 android:id="@+id/crowdloanContributeTitle"
                 android:text="@string/crowdloan_contribute_title" />
 
-            <io.novafoundation.nova.common.view.AmountView
+            <com.dfinn.wallet.common.view.AmountView
                 android:id="@+id/crowdloanContributeAmount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
                     tools:text="Your KSM tokens will be returned after the leasing period." />
             </LinearLayout>
 
-            <io.novafoundation.nova.feature_wallet_api.presentation.view.FeeView
+            <com.dfinn.wallet.feature_wallet_api.presentation.view.FeeView
                 android:id="@+id/crowdloanContributeFee"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
                 android:layout_marginEnd="16dp"
                 app:title="@string/network_fee" />
 
-            <io.novafoundation.nova.common.view.TableCellView
+            <com.dfinn.wallet.common.view.TableCellView
                 android:id="@+id/crowdloanContributeReward"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
                 android:layout_marginEnd="16dp"
                 app:title="@string/staking_validator_estimated_reward" />
 
-            <io.novafoundation.nova.common.view.TableCellView
+            <com.dfinn.wallet.common.view.TableCellView
                 android:id="@+id/crowdloanContributeLeasingPeriod"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -136,7 +136,7 @@
                 android:layout_marginEnd="16dp"
                 android:background="@color/white_8" />
 
-            <io.novafoundation.nova.common.view.GoNextView
+            <com.dfinn.wallet.common.view.GoNextView
                 android:layout_width="match_parent"
                 tools:icon="?attr/colorAccent"
                 tools:text="Learn more about crowdloan"
@@ -146,7 +146,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <io.novafoundation.nova.common.view.PrimaryButton
+    <com.dfinn.wallet.common.view.PrimaryButton
         android:id="@+id/crowdloanContributeContinue"
         style="@style/Widget.Nova.Button.Primary"
         android:layout_width="match_parent"

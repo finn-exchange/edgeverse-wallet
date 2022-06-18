@@ -51,7 +51,7 @@
             android:includeFontPadding="false"
             tools:text="Story body" />
 
-        <io.novafoundation.nova.common.view.PrimaryButton
+        <com.dfinn.wallet.common.view.PrimaryButton
             android:id="@+id/stakingStoryLearnMore"
             style="@style/Widget.Nova.Button.Primary"
             android:layout_width="match_parent"

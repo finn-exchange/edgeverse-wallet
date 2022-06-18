@@ -22,9 +22,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintHorizontal_bias="0"
         app:layout_constrainedWidth="true"
         app:layout_constraintEnd_toStartOf="@id/advertisementCardImage"
+        app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Rewards are paid every 2-3 days by validators" />
@@ -72,22 +72,22 @@
         app:tint="?attr/colorAccent" />
 
     <androidx.constraintlayout.widget.Group
+        android:id="@+id/advertisementCardLearnMoreGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/advertisementCardLearnMoreGroup"
         android:visibility="gone"
         app:constraint_referenced_ids="advertisementCardLearnMoreArrow,advertisementCardLearnMoreContent"
         tools:visibility="visible" />
 
-    <io.novafoundation.nova.common.view.PrimaryButton
-        android:layout_width="0dp"
+    <com.dfinn.wallet.common.view.PrimaryButton
         android:id="@+id/advertisementCardButton"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        app:appearance="primaryTransparent"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:visibility="gone"
+        app:appearance="primaryTransparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/advertisementCardLearnMoreContent"

@@ -8,14 +8,14 @@
     android:orientation="vertical"
     tools:background="@color/black">
 
-    <io.novafoundation.nova.common.view.Toolbar
+    <com.dfinn.wallet.common.view.Toolbar
         android:id="@+id/confirmSetControllerToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:dividerVisible="false"
         app:titleText="@string/staking_change_controller" />
 
-    <io.novafoundation.nova.feature_wallet_api.presentation.view.extrinsic.GenericExtrinsicInformationView
+    <com.dfinn.wallet.feature_wallet_api.presentation.view.extrinsic.GenericExtrinsicInformationView
         android:id="@+id/confirmSetControllerExtrinsicInformation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,27 +23,27 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp" />
 
-    <io.novafoundation.nova.common.view.TableView
+    <com.dfinn.wallet.common.view.TableView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp">
 
-        <io.novafoundation.nova.common.view.TableCellView
+        <com.dfinn.wallet.common.view.TableCellView
             app:title="@string/staking_controller_account"
             android:id="@+id/confirmSetControllerController"
             app:primaryValueIcon="@drawable/ic_info_16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-    </io.novafoundation.nova.common.view.TableView>
+    </com.dfinn.wallet.common.view.TableView>
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <io.novafoundation.nova.common.view.PrimaryButton
+    <com.dfinn.wallet.common.view.PrimaryButton
         android:id="@+id/confirmSetControllerConfirm"
         style="@style/Widget.Nova.Button.Primary"
         android:layout_width="match_parent"

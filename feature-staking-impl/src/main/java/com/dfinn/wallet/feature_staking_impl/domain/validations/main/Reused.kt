@@ -1,0 +1,10 @@
+package com.dfinn.wallet.feature_staking_impl.domain.validations.main
+
+import com.dfinn.wallet.feature_staking_impl.domain.validations.AccountRequiredValidation
+import com.dfinn.wallet.feature_staking_impl.domain.validations.UnbondingRequestsLimitValidation
+
+const val BALANCE_REQUIRED_STASH = "MainStakingAccountRequiredValidation.Stash"
+const val BALANCE_REQUIRED_CONTROLLER = "MainStakingAccountRequiredValidation.Controller"
+
+typealias MainStakingAccountRequiredValidation = AccountRequiredValidation<StakeActionsValidationPayload, StakeActionsValidationFailure>
+typealias MainStakingUnlockingLimitValidation = UnbondingRequestsLimitValidation<StakeActionsValidationPayload, StakeActionsValidationFailure>

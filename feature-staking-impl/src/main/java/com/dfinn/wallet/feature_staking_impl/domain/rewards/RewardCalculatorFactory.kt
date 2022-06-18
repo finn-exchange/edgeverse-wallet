@@ -1,0 +1,51 @@
+package com.dfinn.wallet.feature_staking_impl.domain.rewards
+
+import com.dfinn.wallet.feature_staking_api.domain.api.AccountIdMap
+import com.dfinn.wallet.feature_staking_api.domain.api.StakingRepository
+import com.dfinn.wallet.feature_staking_api.domain.api.getActiveElectedValidatorsExposures
+import com.dfinn.wallet.feature_staking_api.domain.model.Exposure
+import com.dfinn.wallet.feature_staking_api.domain.model.ValidatorPrefs
+import com.dfinn.wallet.feature_staking_impl.data.StakingSharedState
+import com.dfinn.wallet.feature_staking_impl.domain.error.accountIdNotFound
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+
+class RewardCalculatorFactory(
+    private val stakingRepository: StakingRepository,
+    private val sharedState: StakingSharedState,
+) {
+
+    suspend fun create(
+        exposures: AccountIdMap<Exposure>,
+        validatorsPrefs: AccountIdMap<ValidatorPrefs?>
+    ): RewardCalculator = withContext(Dispatchers.Default) {
+        val chainId = sharedState.chainId()
+
+        val totalIssuance = stakingRepository.getTotalIssuance(chainId)
+
+        val validators = exposures.keys.mapNotNull { accountIdHex ->
+            val exposure = exposures[accountIdHex] ?: accountIdNotFound(accountIdHex)
+            val validatorPrefs = validatorsPrefs[accountIdHex] ?: return@mapNotNull null
+
+            RewardCalculationTarget(
+                accountIdHex = accountIdHex,
+                totalStake = exposure.total,
+                commission = validatorPrefs.commission
+            )
+        }
+
+        RewardCalculator(
+            validators = validators,
+            totalIssuance = totalIssuance
+        )
+    }
+
+    suspend fun create(): RewardCalculator = withContext(Dispatchers.Default) {
+        val chainId = sharedState.chainId()
+
+        val exposures = stakingRepository.getActiveElectedValidatorsExposures(chainId)
+        val validatorsPrefs = stakingRepository.getValidatorPrefs(chainId, exposures.keys.toList())
+
+        create(exposures, validatorsPrefs)
+    }
+}
