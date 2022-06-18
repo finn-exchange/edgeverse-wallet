@@ -4,7 +4,7 @@ buildscript {
         versionName = '2.7.1'
         versionCode = 20
 
-        applicationId = "io.novafoundation.nova"
+        applicationId = "com.dfinn.wallet"
         releaseApplicationSuffix = "market"
 
         // SDK and tools

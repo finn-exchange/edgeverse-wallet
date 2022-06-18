@@ -15,7 +15,7 @@
         android:background="@color/bar_bg_64"
         android:orientation="horizontal">
 
-        <io.novafoundation.nova.common.view.SearchView
+        <com.dfinn.wallet.common.view.SearchView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"

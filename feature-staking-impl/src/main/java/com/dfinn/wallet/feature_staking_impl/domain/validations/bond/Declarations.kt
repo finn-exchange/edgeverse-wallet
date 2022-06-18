@@ -1,0 +1,9 @@
+package com.dfinn.wallet.feature_staking_impl.domain.validations.bond
+
+import com.dfinn.wallet.common.validation.ValidationSystem
+import com.dfinn.wallet.feature_wallet_api.domain.validation.EnoughToPayFeesValidation
+import com.dfinn.wallet.feature_wallet_api.domain.validation.PositiveAmountValidation
+
+typealias BondMoreFeeValidation = EnoughToPayFeesValidation<BondMoreValidationPayload, BondMoreValidationFailure>
+typealias NotZeroBondValidation = PositiveAmountValidation<BondMoreValidationPayload, BondMoreValidationFailure>
+typealias BondMoreValidationSystem = ValidationSystem<BondMoreValidationPayload, BondMoreValidationFailure>

@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:171267697857:android:d987123a4a81a1e5267840",
         "android_client_info": {
-          "package_name": "io.novafoundation.nova.debug"
+          "package_name": "com.dfinn.wallet.debug"
         }
       },
       "oauth_client": [
@@ -45,7 +45,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:171267697857:android:a456988f1af9a191267840",
         "android_client_info": {
-          "package_name": "io.novafoundation.nova.dev"
+          "package_name": "com.dfinn.wallet.dev"
         }
       },
       "oauth_client": [

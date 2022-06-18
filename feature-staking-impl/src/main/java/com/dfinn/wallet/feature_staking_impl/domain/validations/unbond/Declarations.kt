@@ -1,0 +1,13 @@
+package com.dfinn.wallet.feature_staking_impl.domain.validations.unbond
+
+import com.dfinn.wallet.common.validation.Validation
+import com.dfinn.wallet.common.validation.ValidationSystem
+import com.dfinn.wallet.feature_staking_impl.domain.validations.UnbondingRequestsLimitValidation
+import com.dfinn.wallet.feature_wallet_api.domain.validation.EnoughToPayFeesValidation
+import com.dfinn.wallet.feature_wallet_api.domain.validation.PositiveAmountValidation
+
+typealias UnbondFeeValidation = EnoughToPayFeesValidation<UnbondValidationPayload, UnbondValidationFailure>
+typealias NotZeroUnbondValidation = PositiveAmountValidation<UnbondValidationPayload, UnbondValidationFailure>
+typealias UnbondLimitValidation = UnbondingRequestsLimitValidation<UnbondValidationPayload, UnbondValidationFailure>
+typealias UnbondValidation = Validation<UnbondValidationPayload, UnbondValidationFailure>
+typealias UnbondValidationSystem = ValidationSystem<UnbondValidationPayload, UnbondValidationFailure>

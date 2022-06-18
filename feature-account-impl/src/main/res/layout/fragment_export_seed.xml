@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:background="@color/black">
 
-    <io.novafoundation.nova.common.view.Toolbar
+    <com.dfinn.wallet.common.view.Toolbar
         android:id="@+id/exportSeedToolbar"
         android:layout_width="match_parent"
         app:iconRight="@drawable/ic_options"

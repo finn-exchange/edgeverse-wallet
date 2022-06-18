@@ -1,0 +1,15 @@
+package com.dfinn.wallet.runtime.multiNetwork.runtime
+
+import com.dfinn.wallet.runtime.multiNetwork.chain.model.Chain
+import com.dfinn.wallet.test_shared.whenever
+import org.mockito.Mockito
+
+object Mocks {
+    fun chain(id: String) : Chain {
+        val chain = Mockito.mock(Chain::class.java)
+
+        whenever(chain.id).thenReturn(id)
+
+        return chain
+    }
+}

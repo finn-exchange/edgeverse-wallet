@@ -8,7 +8,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <io.novafoundation.nova.common.view.Toolbar
+    <com.dfinn.wallet.common.view.Toolbar
         android:id="@+id/backupMnemonicToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
         android:text="@string/account_create_details_v2_2_0"
         android:textColor="@color/black1" />
 
-    <io.novafoundation.nova.common.view.LabeledTextView
+    <com.dfinn.wallet.common.view.LabeledTextView
         android:id="@+id/backupMnemonicPhrase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <io.novafoundation.nova.common.view.PrimaryButton
+    <com.dfinn.wallet.common.view.PrimaryButton
         android:id="@+id/backupMnemonicContinue"
         style="@style/Widget.Nova.Button.Primary"
         android:layout_width="match_parent"

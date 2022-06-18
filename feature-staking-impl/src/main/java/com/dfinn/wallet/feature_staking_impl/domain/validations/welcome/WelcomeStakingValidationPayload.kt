@@ -1,0 +1,3 @@
+package com.dfinn.wallet.feature_staking_impl.domain.validations.welcome
+
+class WelcomeStakingValidationPayload

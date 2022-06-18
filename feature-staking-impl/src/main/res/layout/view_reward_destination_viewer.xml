@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:parentTag="io.novafoundation.nova.common.view.TableView">
+    tools:parentTag="com.dfinn.wallet.common.view.TableView">
 
-    <io.novafoundation.nova.common.view.TableCellView
+    <com.dfinn.wallet.common.view.TableCellView
         android:id="@+id/viewRewardDestinationDestination"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title="@string/staking_reward_destination" />
 
-    <io.novafoundation.nova.common.view.TableCellView
+    <com.dfinn.wallet.common.view.TableCellView
         android:id="@+id/viewRewardDestinationPayoutAccount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

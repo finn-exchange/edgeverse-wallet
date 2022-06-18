@@ -1,0 +1,9 @@
+package com.dfinn.wallet.feature_crowdloan_impl.domain.contribute.validations.custom.moonbeam
+
+import com.dfinn.wallet.common.validation.Validation
+import com.dfinn.wallet.common.validation.ValidationSystem
+import com.dfinn.wallet.feature_wallet_api.domain.validation.EnoughToPayFeesValidation
+
+typealias MoonbeamTermsValidationSystem = ValidationSystem<MoonbeamTermsPayload, MoonbeamTermsValidationFailure>
+typealias MoonbeamTermsValidation = Validation<MoonbeamTermsPayload, MoonbeamTermsValidationFailure>
+typealias MoonbeamTermsFeeValidation = EnoughToPayFeesValidation<MoonbeamTermsPayload, MoonbeamTermsValidationFailure>

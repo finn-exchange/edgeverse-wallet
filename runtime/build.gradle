@@ -53,6 +53,7 @@ dependencies {
     implementation retrofitDep
 
     implementation daggerDep
+    testImplementation project(path: ':runtime')
     kapt daggerKapt
 
     testImplementation project(':test-shared')

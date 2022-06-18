@@ -90,7 +90,7 @@
             app:layout_constraintStart_toStartOf="@id/dappMainWelcomeSubtitle"
             app:layout_constraintTop_toBottomOf="@+id/dappMainWelcomeSubtitle" />
 
-        <io.novafoundation.nova.feature_dapp_impl.presentation.main.view.TapToSearchView
+        <com.dfinn.wallet.feature_dapp_impl.presentation.main.view.TapToSearchView
             android:id="@+id/dappMainSearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -112,7 +112,7 @@
             app:layout_constraintTop_toBottomOf="@+id/dappMainSearch" />
 
 
-        <io.novafoundation.nova.common.view.ManageButton
+        <com.dfinn.wallet.common.view.ManageButton
             android:id="@+id/dappMainManage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
             app:layout_constraintEnd_toEndOf="@+id/dappMainSearch"
             app:layout_constraintTop_toTopOf="@+id/dappMainCatalogTitle" />
 
-        <io.novafoundation.nova.feature_dapp_impl.presentation.main.view.CategorizedDappsView
+        <com.dfinn.wallet.feature_dapp_impl.presentation.main.view.CategorizedDappsView
             android:id="@+id/dappMainCategorizedDapps"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

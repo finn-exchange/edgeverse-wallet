@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <io.novafoundation.nova.common.view.Toolbar
+        <com.dfinn.wallet.common.view.Toolbar
             android:layout_width="match_parent"
             android:id="@+id/nftDetailsToolbar"
             android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
             android:layout_marginEnd="16dp"
             tools:text="Honeybird" />
 
-        <io.novafoundation.nova.feature_nft_impl.presentation.nft.common.NftIssuanceView
+        <com.dfinn.wallet.feature_nft_impl.presentation.nft.common.NftIssuanceView
             android:id="@+id/nftDetailsIssuance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
             android:layout_marginBottom="24dp"
             tools:text="Wayne: Hello sir, what's your name and what brings you to Pastel Beach Mall?" />
 
-        <io.novafoundation.nova.feature_wallet_api.presentation.view.PriceSectionView
+        <com.dfinn.wallet.feature_wallet_api.presentation.view.PriceSectionView
             android:id="@+id/nftDetailsPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
             android:layout_marginBottom="12dp"
             android:layout_marginEnd="16dp" />
 
-        <io.novafoundation.nova.common.view.TableView
+        <com.dfinn.wallet.common.view.TableView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -77,13 +77,13 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="24dp">
 
-            <io.novafoundation.nova.common.view.TableCellView
+            <com.dfinn.wallet.common.view.TableCellView
                 android:layout_width="match_parent"
                 android:id="@+id/nftDetailsCollection"
                 android:layout_height="wrap_content"
                 app:title="@string/nft_collection" />
 
-            <io.novafoundation.nova.common.view.TableCellView
+            <com.dfinn.wallet.common.view.TableCellView
                 android:id="@+id/nftDetailsOnwer"
                 app:primaryValueIcon="@drawable/ic_info_16"
                 app:primaryValueIconTint="@color/white_64"
@@ -91,7 +91,7 @@
                 android:layout_height="wrap_content"
                 app:title="@string/nft_owned_by" />
 
-            <io.novafoundation.nova.common.view.TableCellView
+            <com.dfinn.wallet.common.view.TableCellView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:primaryValueIcon="@drawable/ic_info_16"
@@ -99,11 +99,11 @@
                 android:id="@+id/nftDetailsCreator"
                 app:title="@string/nft_created_by" />
 
-            <io.novafoundation.nova.common.view.TableCellView
+            <com.dfinn.wallet.common.view.TableCellView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/nftDetailsChain"
                 app:title="@string/common_network" />
-        </io.novafoundation.nova.common.view.TableView>
+        </com.dfinn.wallet.common.view.TableView>
     </LinearLayout>
 </ScrollView>

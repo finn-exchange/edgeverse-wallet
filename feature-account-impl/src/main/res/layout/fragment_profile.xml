@@ -25,7 +25,7 @@
             android:textColor="@color/white" />
 
 
-        <io.novafoundation.nova.common.view.AccountInfoView
+        <com.dfinn.wallet.common.view.AccountInfoView
             android:id="@+id/accountView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,34 +35,34 @@
             app:accountActionIcon="@drawable/ic_info_24"
             app:textVisible="false" />
 
-        <io.novafoundation.nova.feature_account_impl.presentation.settings.view.SettingsGroupHeaderView
+        <com.dfinn.wallet.feature_account_impl.presentation.settings.view.SettingsGroupHeaderView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:text="@string/settings_general" />
 
-        <io.novafoundation.nova.feature_account_impl.presentation.settings.view.SettingsGroupView
+        <com.dfinn.wallet.feature_account_impl.presentation.settings.view.SettingsGroupView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp">
 
-            <io.novafoundation.nova.feature_account_impl.presentation.settings.view.SettingsItemView
+            <com.dfinn.wallet.feature_account_impl.presentation.settings.view.SettingsItemView
                 android:id="@+id/settingsWallets"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_wallet_24"
                 app:title="@string/profile_accounts_title_2_0" />
 
-            <io.novafoundation.nova.feature_account_impl.presentation.settings.view.SettingsItemView
+            <com.dfinn.wallet.feature_account_impl.presentation.settings.view.SettingsItemView
                 android:id="@+id/settingsCurrency"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_outline_monetization_on_24"
                 app:title="@string/profile_currency" />
 
-            <io.novafoundation.nova.feature_account_impl.presentation.settings.view.SettingsItemView
+            <com.dfinn.wallet.feature_account_impl.presentation.settings.view.SettingsItemView
                 android:id="@+id/settingsNetworks"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
                 app:title="@string/connection_management_title"
                 tools:visibility="visible" />
 
-            <io.novafoundation.nova.feature_account_impl.presentation.settings.view.SettingsItemView
+            <com.dfinn.wallet.feature_account_impl.presentation.settings.view.SettingsItemView
                 android:id="@+id/settingsLanguage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
                 app:title="@string/language_title"
                 tools:settingValue="English" />
 
-            <io.novafoundation.nova.feature_account_impl.presentation.settings.view.SettingsItemView
+            <com.dfinn.wallet.feature_account_impl.presentation.settings.view.SettingsItemView
                 android:id="@+id/settingsPin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -91,43 +91,43 @@
                 android:layout_height="0.5dp"
                 android:background="@drawable/divider_decoration" />
 
-        </io.novafoundation.nova.feature_account_impl.presentation.settings.view.SettingsGroupView>
+        </com.dfinn.wallet.feature_account_impl.presentation.settings.view.SettingsGroupView>
 
-        <io.novafoundation.nova.feature_account_impl.presentation.settings.view.SettingsGroupHeaderView
+        <com.dfinn.wallet.feature_account_impl.presentation.settings.view.SettingsGroupHeaderView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:text="@string/about_title" />
 
-        <io.novafoundation.nova.feature_account_impl.presentation.settings.view.SettingsGroupView
+        <com.dfinn.wallet.feature_account_impl.presentation.settings.view.SettingsGroupView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp">
 
-            <io.novafoundation.nova.feature_account_impl.presentation.settings.view.SettingsItemView
+            <com.dfinn.wallet.feature_account_impl.presentation.settings.view.SettingsItemView
                 android:id="@+id/settingsWebsite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_website"
                 app:title="@string/about_website_v2_2_0" />
 
-            <io.novafoundation.nova.feature_account_impl.presentation.settings.view.SettingsItemView
+            <com.dfinn.wallet.feature_account_impl.presentation.settings.view.SettingsItemView
                 android:id="@+id/settingsGithub"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_github"
                 app:title="@string/about_github_v2_2_0" />
 
-            <io.novafoundation.nova.feature_account_impl.presentation.settings.view.SettingsItemView
+            <com.dfinn.wallet.feature_account_impl.presentation.settings.view.SettingsItemView
                 android:id="@+id/settingsTerms"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_document"
                 app:title="@string/about_terms_v2_2_0" />
 
-            <io.novafoundation.nova.feature_account_impl.presentation.settings.view.SettingsItemView
+            <com.dfinn.wallet.feature_account_impl.presentation.settings.view.SettingsItemView
                 android:id="@+id/settingsPrivacy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -139,7 +139,7 @@
                 android:layout_height="0.5dp"
                 android:background="@drawable/divider_decoration" />
 
-        </io.novafoundation.nova.feature_account_impl.presentation.settings.view.SettingsGroupView>
+        </com.dfinn.wallet.feature_account_impl.presentation.settings.view.SettingsGroupView>
 
     </LinearLayout>
 

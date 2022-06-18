@@ -25,7 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <io.novafoundation.nova.feature_assets.presentation.balance.list.view.AssetsTotalBalanceView
+    <com.dfinn.wallet.feature_assets.presentation.balance.list.view.AssetsTotalBalanceView
         android:id="@+id/balanceListTotalBalance"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/balanceListTotalTitle" />
 
-    <io.novafoundation.nova.feature_assets.presentation.balance.list.view.GoToNftsView
+    <com.dfinn.wallet.feature_assets.presentation.balance.list.view.GoToNftsView
         android:id="@+id/balanceListNfts"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@id/balanceListNfts"
         app:layout_goneMarginBottom="20dp" />
 
-    <io.novafoundation.nova.common.view.ManageButton
+    <com.dfinn.wallet.common.view.ManageButton
         android:id="@+id/balanceListManage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/balanceListAssetTitle" />
 
-    <io.novafoundation.nova.common.view.PlaceholderView
+    <com.dfinn.wallet.common.view.PlaceholderView
         android:id="@+id/balanceListAssetPlaceholder"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
