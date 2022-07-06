@@ -22,7 +22,7 @@
     <ImageView
         android:id="@+id/logoImg"
         android:layout_width="0dp"
-        android:layout_height="240dp"
+        android:layout_height="@dimen/logo_height"
         android:layout_marginHorizontal="24dp"
         android:contentDescription="@null"
         android:src="@drawable/img_edgeware"
