@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/DAppBrowserFragment"
-        android:name="com.dfinn.wallet.feature_dapp_impl.presentation.browser.main.DAppBrowserFragment"
+        android:name="com.edgeverse.wallet.feature_dapp_impl.presentation.browser.main.DAppBrowserFragment"
         android:label="DAppBrowserFragment"
         tools:layout="@layout/fragment_dapp_browser">
 
@@ -34,7 +34,7 @@
 
     <dialog
         android:id="@+id/ConfirmSignExtrinsicFragment"
-        android:name="com.dfinn.wallet.feature_dapp_impl.presentation.browser.signExtrinsic.DAppSignExtrinsicFragment"
+        android:name="com.edgeverse.wallet.feature_dapp_impl.presentation.browser.signExtrinsic.DAppSignExtrinsicFragment"
         android:label="ConfirmSignExtrinsicFragment"
         tools:layout="@layout/bottom_sheet_confirm_sign_extrinsic">
         <action
@@ -44,14 +44,14 @@
 
     <dialog
         android:id="@+id/extrinsicDetailsFragment"
-        android:name="com.dfinn.wallet.feature_dapp_impl.presentation.browser.extrinsicDetails.DappExtrinsicDetailsFragment"
+        android:name="com.edgeverse.wallet.feature_dapp_impl.presentation.browser.extrinsicDetails.DappExtrinsicDetailsFragment"
         android:label="ExtrinsicDetailsFragment"
         tools:layout="@layout/fragment_dapp_extrinsic_details" />
 
     <fragment
         app:useAdd="true"
         android:id="@+id/dappSearchFragment"
-        android:name="com.dfinn.wallet.feature_dapp_impl.presentation.search.DappSearchFragment"
+        android:name="com.edgeverse.wallet.feature_dapp_impl.presentation.search.DappSearchFragment"
         android:label="DappSearchFragment"
         tools:layout="@layout/fragment_search_dapp" />
 
@@ -59,6 +59,6 @@
         app:useAdd="true"
         android:id="@+id/addToFavouritesFragment"
         tools:layout="@layout/fragment_add_to_favourites"
-        android:name="com.dfinn.wallet.feature_dapp_impl.presentation.addToFavourites.AddToFavouritesFragment"
+        android:name="com.edgeverse.wallet.feature_dapp_impl.presentation.addToFavourites.AddToFavouritesFragment"
         android:label="AddToFavouritesFragment" />
 </navigation>

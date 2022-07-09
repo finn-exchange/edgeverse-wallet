@@ -16,10 +16,8 @@ import com.edgeverse.wallet.feature_dapp_impl.domain.search.DappSearchResult
 import com.edgeverse.wallet.feature_dapp_impl.domain.search.SearchDappInteractor
 import com.edgeverse.wallet.feature_dapp_impl.presentation.search.model.DappSearchModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.mapLatest
-import kotlin.time.ExperimentalTime
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class DAppSearchViewModel(

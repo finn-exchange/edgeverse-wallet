@@ -15,14 +15,14 @@
         android:id="@+id/validatorDetailsContainer"
         android:orientation="vertical">
 
-        <com.dfinn.wallet.common.view.Toolbar
+        <com.edgeverse.wallet.common.view.Toolbar
             android:id="@+id/validatorDetailsToolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:dividerVisible="false"
             app:titleText="@string/staking_validator_info_title" />
 
-        <com.dfinn.wallet.feature_account_api.view.AddressView
+        <com.edgeverse.wallet.feature_account_api.view.AddressView
             android:id="@+id/validatorAccountInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
             android:layout_marginTop="16dp"
             app:actionIcon="@drawable/ic_info_16" />
 
-        <com.dfinn.wallet.common.view.TableView
+        <com.edgeverse.wallet.common.view.TableView
             android:layout_width="match_parent"
             app:title="@string/staking_title"
             android:layout_marginStart="16dp"
@@ -39,34 +39,34 @@
             android:layout_marginTop="12dp"
             android:layout_height="wrap_content">
 
-            <com.dfinn.wallet.common.view.TableCellView
+            <com.edgeverse.wallet.common.view.TableCellView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/validatorStakingStatus"
                 app:title="@string/common_status" />
 
-            <com.dfinn.wallet.common.view.TableCellView
+            <com.edgeverse.wallet.common.view.TableCellView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/validatorStakingNominators"
                 app:title="@string/staking_validator_nominators" />
 
-            <com.dfinn.wallet.common.view.TableCellView
+            <com.edgeverse.wallet.common.view.TableCellView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleIcon="@drawable/ic_info_16"
                 android:id="@+id/validatorStakingTotalStake"
                 app:title="@string/staking_validator_total_stake" />
 
-            <com.dfinn.wallet.common.view.TableCellView
+            <com.edgeverse.wallet.common.view.TableCellView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/validatorStakingEstimatedReward"
                 app:title="@string/staking_validator_estimated_reward" />
 
-        </com.dfinn.wallet.common.view.TableView>
+        </com.edgeverse.wallet.common.view.TableView>
 
-        <com.dfinn.wallet.common.view.TableView
+        <com.edgeverse.wallet.common.view.TableView
             android:layout_width="match_parent"
             app:title="@string/identity_title"
             android:id="@+id/validatorIdentity"
@@ -75,39 +75,39 @@
             android:layout_marginTop="12dp"
             android:layout_height="wrap_content">
 
-            <com.dfinn.wallet.common.view.TableCellView
+            <com.edgeverse.wallet.common.view.TableCellView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/validatorIdentityLegalName"
                 app:title="@string/identity_legal_name_title" />
 
-            <com.dfinn.wallet.common.view.TableCellView
+            <com.edgeverse.wallet.common.view.TableCellView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:primaryValueStyle="link"
                 android:id="@+id/validatorIdentityEmail"
                 app:title="@string/identity_email_title" />
 
-            <com.dfinn.wallet.common.view.TableCellView
+            <com.edgeverse.wallet.common.view.TableCellView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:primaryValueStyle="link"
                 android:id="@+id/validatorIdentityWeb"
                 app:title="@string/identity_web_title" />
 
-            <com.dfinn.wallet.common.view.TableCellView
+            <com.edgeverse.wallet.common.view.TableCellView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:primaryValueStyle="link"
                 android:id="@+id/validatorIdentityTwitter"
                 app:title="@string/settings_twitter" />
 
-            <com.dfinn.wallet.common.view.TableCellView
+            <com.edgeverse.wallet.common.view.TableCellView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/validatorIdentityElementName"
                 app:title="@string/identity_riot_name_title" />
 
-        </com.dfinn.wallet.common.view.TableView>
+        </com.edgeverse.wallet.common.view.TableView>
     </LinearLayout>
 </ScrollView>

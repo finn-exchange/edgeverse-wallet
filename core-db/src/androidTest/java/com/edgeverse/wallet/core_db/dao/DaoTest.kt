@@ -1,4 +1,4 @@
-package com.dfinn.wallet.core_db.dao
+package com.edgeverse.wallet.core_db.dao
 
 import android.content.Context
 import androidx.room.Room

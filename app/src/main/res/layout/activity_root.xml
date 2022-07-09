@@ -7,7 +7,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/navHost"
-        android:name="com.dfinn.wallet.root.navigation.NovaNavHostFragment"
+        android:name="com.edgeverse.wallet.root.navigation.NovaNavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:defaultNavHost="true"

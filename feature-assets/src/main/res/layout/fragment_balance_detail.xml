@@ -107,7 +107,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/balanceDetailRate" />
 
-            <com.dfinn.wallet.feature_assets.presentation.balance.detail.AssetDetailBalancesView
+            <com.edgeverse.wallet.feature_assets.presentation.balance.detail.AssetDetailBalancesView
                 android:id="@+id/balanceDetailsBalances"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -119,7 +119,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/balanceDetailBlur" />
 
-            <com.dfinn.wallet.feature_assets.presentation.balance.assetActions.AssetActionsView
+            <com.edgeverse.wallet.feature_assets.presentation.balance.assetActions.AssetActionsView
                 android:id="@+id/balanceDetaiActions"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/asset_height"
@@ -134,11 +134,11 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <com.dfinn.wallet.feature_assets.presentation.transaction.history.TransferHistorySheet
+        <com.edgeverse.wallet.feature_assets.presentation.transaction.history.TransferHistorySheet
             android:id="@+id/transfersContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="com.dfinn.wallet.common.view.bottomSheet.LockBottomSheetBehavior"
+            app:layout_behavior="com.edgeverse.wallet.common.view.bottomSheet.LockBottomSheetBehavior"
             tools:layout_height="400dp" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -41,7 +41,7 @@
 
         </FrameLayout>
 
-        <com.dfinn.wallet.feature_wallet_api.presentation.view.AssetSelectorView
+        <com.edgeverse.wallet.feature_wallet_api.presentation.view.AssetSelectorView
             android:id="@+id/stakingAssetSelector"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
             android:layout_marginEnd="16dp"
             app:backgroundStyle="blurred" />
 
-        <com.dfinn.wallet.feature_staking_impl.presentation.staking.main.view.NetworkInfoView
+        <com.edgeverse.wallet.feature_staking_impl.presentation.staking.main.view.NetworkInfoView
             android:id="@+id/stakingNetworkInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
             android:layout_marginEnd="16dp"
             app:expanded="false" />
 
-        <com.dfinn.wallet.feature_staking_impl.presentation.view.AlertsView
+        <com.edgeverse.wallet.feature_staking_impl.presentation.view.AlertsView
             android:id="@+id/stakingAlertsInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp" />
 
-        <com.dfinn.wallet.feature_staking_impl.presentation.staking.main.view.UserRewardsView
+        <com.edgeverse.wallet.feature_staking_impl.presentation.staking.main.view.UserRewardsView
             android:id="@+id/stakingUserRewards"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp" />
 
-        <com.dfinn.wallet.feature_staking_impl.presentation.view.StakeSummaryView
+        <com.edgeverse.wallet.feature_staking_impl.presentation.view.StakeSummaryView
             android:id="@+id/stakingStakeSummary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             tools:visibility="visible" />
 
-        <com.dfinn.wallet.feature_staking_impl.presentation.staking.main.unbonding.UnbondingsView
+        <com.edgeverse.wallet.feature_staking_impl.presentation.staking.main.unbonding.UnbondingsView
             android:id="@+id/stakingStakeUnbondings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
             android:visibility="gone"
             tools:visibility="visible" />
 
-        <com.dfinn.wallet.feature_staking_impl.presentation.staking.main.view.ManageStakingView
+        <com.edgeverse.wallet.feature_staking_impl.presentation.staking.main.view.ManageStakingView
             android:id="@+id/stakingStakeManage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -106,7 +106,7 @@
             android:visibility="gone"
             tools:visibility="visible" />
 
-        <com.dfinn.wallet.feature_staking_impl.presentation.staking.main.view.EstimateEarningView
+        <com.edgeverse.wallet.feature_staking_impl.presentation.staking.main.view.EstimateEarningView
             android:id="@+id/stakingEstimate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

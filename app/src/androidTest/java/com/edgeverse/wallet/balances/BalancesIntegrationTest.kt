@@ -1,4 +1,4 @@
-package com.dfinn.wallet.balances
+package com.edgeverse.wallet.balances
 
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider

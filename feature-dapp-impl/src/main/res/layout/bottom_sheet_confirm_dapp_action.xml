@@ -25,7 +25,7 @@
         android:layout_marginBottom="16dp"
         android:orientation="horizontal">
 
-        <com.dfinn.wallet.common.view.PrimaryButton
+        <com.edgeverse.wallet.common.view.PrimaryButton
             android:id="@+id/confirmDAppActionReject"
             style="@style/Widget.Nova.Button"
             android:layout_width="0dp"
@@ -36,7 +36,7 @@
             android:text="@string/common_reject"
             android:theme="@style/NegativeAccent" />
 
-        <com.dfinn.wallet.common.view.PrimaryButton
+        <com.edgeverse.wallet.common.view.PrimaryButton
             android:id="@+id/confirmDAppActionAllow"
             style="@style/Widget.Nova.Button"
             android:layout_width="0dp"

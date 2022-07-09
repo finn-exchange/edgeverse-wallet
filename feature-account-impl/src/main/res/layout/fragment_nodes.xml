@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     tools:background="@color/black">
 
-    <com.dfinn.wallet.common.view.Toolbar
+    <com.edgeverse.wallet.common.view.Toolbar
         android:id="@+id/novaToolbar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

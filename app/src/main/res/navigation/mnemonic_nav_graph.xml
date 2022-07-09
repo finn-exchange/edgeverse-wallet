@@ -8,13 +8,13 @@
 
     <fragment
         android:id="@+id/advancedEncryptionFragment"
-        android:name="com.dfinn.wallet.feature_account_impl.presentation.account.advancedEncryption.AdvancedEncryptionFragment"
+        android:name="com.edgeverse.wallet.feature_account_impl.presentation.account.advancedEncryption.AdvancedEncryptionFragment"
         android:label="AdvancedEncryptionFragment"
         tools:layout="@layout/fragment_advanced_encryption" />
 
     <fragment
         android:id="@+id/backupMnemonicFragment"
-        android:name="com.dfinn.wallet.feature_account_impl.presentation.mnemonic.backup.BackupMnemonicFragment"
+        android:name="com.edgeverse.wallet.feature_account_impl.presentation.mnemonic.backup.BackupMnemonicFragment"
         android:label="fragment_backup_mnemonic"
         tools:layout="@layout/fragment_backup_mnemonic">
 
@@ -32,7 +32,7 @@
 
     <fragment
         android:id="@+id/confirmMnemonicFragment"
-        android:name="com.dfinn.wallet.feature_account_impl.presentation.mnemonic.confirm.ConfirmMnemonicFragment"
+        android:name="com.edgeverse.wallet.feature_account_impl.presentation.mnemonic.confirm.ConfirmMnemonicFragment"
         android:label="fragment_confirm_mnemonic"
         tools:layout="@layout/fragment_confirm_mnemonic">
 

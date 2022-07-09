@@ -53,7 +53,7 @@
             android:includeFontPadding="false"
             tools:text="Story body" />
 
-        <com.dfinn.wallet.common.view.PrimaryButton
+        <com.edgeverse.wallet.common.view.PrimaryButton
             android:id="@+id/stakingStoryLearnMore"
             style="@style/Widget.Nova.Button.Primary"
             android:layout_width="match_parent"

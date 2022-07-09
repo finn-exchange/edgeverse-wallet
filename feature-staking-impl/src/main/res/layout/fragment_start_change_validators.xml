@@ -8,14 +8,14 @@
     android:orientation="vertical"
     tools:background="@color/black">
 
-    <com.dfinn.wallet.common.view.Toolbar
+    <com.edgeverse.wallet.common.view.Toolbar
         android:id="@+id/startChangeValidatorsToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:dividerVisible="false"
         app:titleText="@string/staking_change_validators" />
 
-    <com.dfinn.wallet.common.view.AdvertisementCard
+    <com.edgeverse.wallet.common.view.AdvertisementCard
         android:id="@+id/startChangeValidatorsRecommended"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         app:subtitle="@string/staking_start_change_validators_recommended_subtitle"
         app:title="@string/staking_start_change_validators_recommended_title" />
 
-    <com.dfinn.wallet.common.view.GoNextView
+    <com.edgeverse.wallet.common.view.GoNextView
         android:id="@+id/startChangeValidatorsCustom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

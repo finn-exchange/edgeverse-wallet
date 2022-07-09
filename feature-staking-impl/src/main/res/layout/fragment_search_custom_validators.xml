@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:background="@color/black">
 
-    <com.dfinn.wallet.common.view.Toolbar
+    <com.edgeverse.wallet.common.view.Toolbar
         android:id="@+id/searchCustomValidatorsToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         app:textRight="@string/common_done"
         app:titleText="@string/common_search" />
 
-    <com.dfinn.wallet.common.view.SearchView
+    <com.edgeverse.wallet.common.view.SearchView
         android:id="@+id/searchCustomValidatorsInput"
         android:layout_width="0dp"
         app:icon="@drawable/ic_search"
@@ -92,7 +92,7 @@
         app:layout_constraintTop_toBottomOf="@+id/searchCustomValidatorAccounts"
         app:layout_constraintVertical_bias="0.4" />
 
-    <com.dfinn.wallet.common.view.PlaceholderView
+    <com.edgeverse.wallet.common.view.PlaceholderView
         android:id="@+id/searchCustomValidatorsPlaceholder"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

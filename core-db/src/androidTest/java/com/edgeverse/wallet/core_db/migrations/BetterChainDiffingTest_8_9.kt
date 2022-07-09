@@ -1,13 +1,13 @@
-package com.dfinn.wallet.core_db.migrations
+package com.edgeverse.wallet.core_db.migrations
 
 import android.content.ContentValues
 import android.database.sqlite.SQLiteDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.dfinn.wallet.core_db.AppDatabase
 import com.dfinn.wallet.core_db.converters.CryptoTypeConverters
-import com.dfinn.wallet.core_db.dao.assetOf
-import com.dfinn.wallet.core_db.dao.chainOf
-import com.dfinn.wallet.core_db.dao.testMetaAccount
+import com.edgeverse.wallet.core_db.dao.assetOf
+import com.edgeverse.wallet.core_db.dao.chainOf
+import com.edgeverse.wallet.core_db.dao.testMetaAccount
 import com.dfinn.wallet.core_db.model.chain.MetaAccountLocal
 import org.junit.Assert.assertEquals
 import org.junit.Test

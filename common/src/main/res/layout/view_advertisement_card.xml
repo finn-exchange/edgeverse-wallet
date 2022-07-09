@@ -79,7 +79,7 @@
         app:constraint_referenced_ids="advertisementCardLearnMoreArrow,advertisementCardLearnMoreContent"
         tools:visibility="visible" />
 
-    <com.dfinn.wallet.common.view.PrimaryButton
+    <com.edgeverse.wallet.common.view.PrimaryButton
         android:id="@+id/advertisementCardButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

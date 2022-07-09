@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:background="@color/black">
 
-    <com.dfinn.wallet.common.view.Toolbar
+    <com.edgeverse.wallet.common.view.Toolbar
         android:id="@+id/redeemToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         app:titleText="@string/staking_redeem" />
 
 
-    <com.dfinn.wallet.feature_wallet_api.presentation.view.amount.PrimaryAmountView
+    <com.edgeverse.wallet.feature_wallet_api.presentation.view.amount.PrimaryAmountView
         android:id="@+id/redeemAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp" />
 
-    <com.dfinn.wallet.feature_wallet_api.presentation.view.extrinsic.GenericExtrinsicInformationView
+    <com.edgeverse.wallet.feature_wallet_api.presentation.view.extrinsic.GenericExtrinsicInformationView
         android:id="@+id/redeemExtrinsicInformation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <com.dfinn.wallet.common.view.PrimaryButton
+    <com.edgeverse.wallet.common.view.PrimaryButton
         android:id="@+id/redeemConfirm"
         style="@style/Widget.Nova.Button.Primary"
         android:layout_width="match_parent"

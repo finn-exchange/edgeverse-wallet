@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:background="@color/black">
 
-    <com.dfinn.wallet.common.view.Toolbar
+    <com.edgeverse.wallet.common.view.Toolbar
         android:id="@+id/extrinsicDetailToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,14 +58,14 @@
                 tools:text="completed"
                 tools:textColor="@color/green" />
 
-            <com.dfinn.wallet.common.view.TableView
+            <com.edgeverse.wallet.common.view.TableView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp">
 
-                <com.dfinn.wallet.common.view.TableCellView
+                <com.edgeverse.wallet.common.view.TableCellView
                     android:id="@+id/extrinsicDetailSender"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -73,14 +73,14 @@
                     app:primaryValueIconTint="@color/white_64"
                     app:title="@string/wallet_sender" />
 
-                <com.dfinn.wallet.common.view.TableCellView
+                <com.edgeverse.wallet.common.view.TableCellView
                     android:id="@+id/extrinsicDetailNetwork"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:title="@string/common_network" />
-            </com.dfinn.wallet.common.view.TableView>
+            </com.edgeverse.wallet.common.view.TableView>
 
-            <com.dfinn.wallet.common.view.TableView
+            <com.edgeverse.wallet.common.view.TableView
                 android:id="@+id/extrinsicDetailTxSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="16dp">
 
-                <com.dfinn.wallet.common.view.TableCellView
+                <com.edgeverse.wallet.common.view.TableCellView
                     android:id="@+id/extrinsicDetailHash"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -96,18 +96,18 @@
                     app:primaryValueIconTint="@color/white_64"
                     app:title="@string/common_transaction_id" />
 
-                <com.dfinn.wallet.common.view.TableCellView
+                <com.edgeverse.wallet.common.view.TableCellView
                     android:id="@+id/extrinsicDetailModule"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:title="@string/common_module" />
 
-                <com.dfinn.wallet.common.view.TableCellView
+                <com.edgeverse.wallet.common.view.TableCellView
                     android:id="@+id/extrinsicDetailCall"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:title="@string/common_call" />
-            </com.dfinn.wallet.common.view.TableView>
+            </com.edgeverse.wallet.common.view.TableView>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -3,16 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:parentTag="com.dfinn.wallet.common.view.TableView"
+    tools:parentTag="com.edgeverse.wallet.common.view.TableView"
     android:layout_height="match_parent">
 
-    <com.dfinn.wallet.common.view.TableCellView
+    <com.edgeverse.wallet.common.view.TableCellView
         android:id="@+id/viewGenericExtrinsicInformationWallet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title="@string/tabbar_wallet_title" />
 
-    <com.dfinn.wallet.common.view.TableCellView
+    <com.edgeverse.wallet.common.view.TableCellView
         android:id="@+id/viewGenericExtrinsicInformationAccount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
         app:primaryValueIconTint="@color/white_64"
         app:title="@string/common_account" />
 
-    <com.dfinn.wallet.feature_wallet_api.presentation.view.FeeView
+    <com.edgeverse.wallet.feature_wallet_api.presentation.view.FeeView
         android:id="@+id/viewGenericExtrinsicInformationFee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

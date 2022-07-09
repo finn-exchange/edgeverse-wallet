@@ -1,4 +1,4 @@
-package com.dfinn.wallet
+package com.edgeverse.wallet
 
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4

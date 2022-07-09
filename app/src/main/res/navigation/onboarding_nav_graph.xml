@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.dfinn.wallet.feature_onboarding_impl.presentation.welcome.WelcomeFragment"
+        android:name="com.edgeverse.wallet.feature_onboarding_impl.presentation.welcome.WelcomeFragment"
         android:label="fragment_users"
         tools:layout="@layout/fragment_welcome">
 
@@ -41,7 +41,7 @@
 
     <fragment
         android:id="@+id/createAccountFragment"
-        android:name="com.dfinn.wallet.feature_account_impl.presentation.account.create.CreateAccountFragment"
+        android:name="com.edgeverse.wallet.feature_account_impl.presentation.account.create.CreateAccountFragment"
         android:label="fragment_create_account"
         tools:layout="@layout/fragment_create_account">
 

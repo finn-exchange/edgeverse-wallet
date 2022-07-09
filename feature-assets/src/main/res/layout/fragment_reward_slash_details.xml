@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:background="@color/black">
 
-    <com.dfinn.wallet.common.view.Toolbar
+    <com.edgeverse.wallet.common.view.Toolbar
         android:id="@+id/rewardDetailToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,14 +59,14 @@
                 tools:text="completed"
                 tools:textColor="@color/green" />
 
-            <com.dfinn.wallet.common.view.TableView
+            <com.edgeverse.wallet.common.view.TableView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp">
 
-                <com.dfinn.wallet.common.view.TableCellView
+                <com.edgeverse.wallet.common.view.TableCellView
                     android:id="@+id/rewardDetailValidator"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -74,20 +74,20 @@
                     app:primaryValueIconTint="@color/white_64"
                     app:title="@string/staking_reward_details_validator" />
 
-                <com.dfinn.wallet.common.view.TableCellView
+                <com.edgeverse.wallet.common.view.TableCellView
                     android:id="@+id/rewardDetailEra"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:title="@string/staking_reward_details_era" />
 
-                <com.dfinn.wallet.common.view.TableCellView
+                <com.edgeverse.wallet.common.view.TableCellView
                     android:id="@+id/rewardDetailNetwork"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:title="@string/common_network" />
-            </com.dfinn.wallet.common.view.TableView>
+            </com.edgeverse.wallet.common.view.TableView>
 
-            <com.dfinn.wallet.common.view.TableView
+            <com.edgeverse.wallet.common.view.TableView
                 android:id="@+id/rewardDetailTxSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="24dp">
 
-                <com.dfinn.wallet.common.view.TableCellView
+                <com.edgeverse.wallet.common.view.TableCellView
                     android:id="@+id/rewardDetailEvent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -104,12 +104,12 @@
                     app:primaryValueIconTint="@color/white_64"
                     app:title="@string/common_event" />
 
-                <com.dfinn.wallet.common.view.TableCellView
+                <com.edgeverse.wallet.common.view.TableCellView
                     android:id="@+id/rewardDetailType"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:title="@string/common_type" />
-            </com.dfinn.wallet.common.view.TableView>
+            </com.edgeverse.wallet.common.view.TableView>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

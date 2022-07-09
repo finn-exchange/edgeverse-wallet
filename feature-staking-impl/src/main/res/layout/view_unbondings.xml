@@ -33,7 +33,7 @@
         tools:itemCount="5"
         tools:listitem="@layout/item_unbonding" />
 
-    <com.dfinn.wallet.common.view.PrimaryButton
+    <com.edgeverse.wallet.common.view.PrimaryButton
         android:id="@+id/unbondingCancel"
         style="@style/Widget.Nova.Button.SecondaryTransparent.Small"
         android:layout_width="0dp"
@@ -48,7 +48,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/unbondingsList" />
 
-    <com.dfinn.wallet.common.view.PrimaryButton
+    <com.edgeverse.wallet.common.view.PrimaryButton
         android:id="@+id/unbondingRedeem"
         style="@style/Widget.Nova.Button.PrimaryTransparent.Small"
         android:layout_width="0dp"

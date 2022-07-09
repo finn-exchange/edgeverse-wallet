@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:parentTag="com.dfinn.wallet.common.view.TableView">
+    tools:parentTag="com.edgeverse.wallet.common.view.TableView">
 
-    <com.dfinn.wallet.common.view.TableCellView
+    <com.edgeverse.wallet.common.view.TableCellView
         android:id="@+id/viewRewardDestinationDestination"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title="@string/staking_reward_destination" />
 
-    <com.dfinn.wallet.common.view.TableCellView
+    <com.edgeverse.wallet.common.view.TableCellView
         android:id="@+id/viewRewardDestinationPayoutAccount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -41,7 +41,7 @@
             app:tint="?attr/colorAccent" />
     </LinearLayout>
 
-    <com.dfinn.wallet.feature_staking_impl.presentation.view.RewardDestinationView
+    <com.edgeverse.wallet.feature_staking_impl.presentation.view.RewardDestinationView
         android:id="@+id/rewardDestinationChooserRestake"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
         android:checked="true"
         app:targetName="@string/staking_setup_restake_v2_2_0" />
 
-    <com.dfinn.wallet.feature_staking_impl.presentation.view.RewardDestinationView
+    <com.edgeverse.wallet.feature_staking_impl.presentation.view.RewardDestinationView
         android:id="@+id/rewardDestinationChooserPayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
         android:textColor="@color/white_64" />
 
 
-    <com.dfinn.wallet.feature_account_api.view.AddressView
+    <com.edgeverse.wallet.feature_account_api.view.AddressView
         android:id="@+id/rewardDestinationChooserPayoutTarget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

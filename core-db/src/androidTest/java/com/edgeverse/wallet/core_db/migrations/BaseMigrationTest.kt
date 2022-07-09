@@ -1,4 +1,4 @@
-package com.dfinn.wallet.core_db.migrations
+package com.edgeverse.wallet.core_db.migrations
 
 import androidx.room.Room
 import androidx.room.migration.Migration

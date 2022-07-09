@@ -71,7 +71,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirmAuthorizeDappTitle" />
 
-    <com.dfinn.wallet.common.view.TableCellView
+    <com.edgeverse.wallet.common.view.TableCellView
         android:id="@+id/confirmAuthorizeDappWallet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
         app:layout_constraintTop_toBottomOf="@+id/confirmAuthorizeDappSubTitle"
         app:title="@string/tabbar_wallet_title" />
 
-    <com.dfinn.wallet.common.view.TableCellView
+    <com.edgeverse.wallet.common.view.TableCellView
         android:id="@+id/confirmAuthorizeDappDApp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

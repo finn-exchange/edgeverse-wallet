@@ -9,7 +9,7 @@
     <fragment
         tools:layout="@layout/fragment_nft_list"
         android:id="@+id/nftListFragment"
-        android:name="com.dfinn.wallet.feature_nft_impl.presentation.nft.list.NftListFragment"
+        android:name="com.edgeverse.wallet.feature_nft_impl.presentation.nft.list.NftListFragment"
         android:label="NftListFragment" >
 
         <action
@@ -24,6 +24,6 @@
     <fragment
         tools:layout="@layout/fragment_nft_details"
         android:id="@+id/nftDetailsFragment"
-        android:name="com.dfinn.wallet.feature_nft_impl.presentation.nft.details.NftDetailsFragment"
+        android:name="com.edgeverse.wallet.feature_nft_impl.presentation.nft.details.NftDetailsFragment"
         android:label="NftDetailsFragment" />
 </navigation>

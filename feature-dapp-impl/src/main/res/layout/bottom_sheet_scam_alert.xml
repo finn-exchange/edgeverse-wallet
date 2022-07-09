@@ -37,7 +37,7 @@
         style="@style/TextAppearance.NovaFoundation.Regular.Footnote"
         android:text="@string/dapp_phishing_subtitle" />
 
-    <com.dfinn.wallet.common.view.PrimaryButton
+    <com.edgeverse.wallet.common.view.PrimaryButton
         android:layout_width="match_parent"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="16dp"

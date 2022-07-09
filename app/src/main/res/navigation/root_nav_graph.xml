@@ -29,7 +29,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.dfinn.wallet.splash.presentation.SplashFragment"
+        android:name="com.edgeverse.wallet.splash.presentation.SplashFragment"
         tools:layout="@layout/fragment_splash">
 
         <action
@@ -52,7 +52,7 @@
 
     <fragment
         android:id="@+id/pincodeFragment"
-        android:name="com.dfinn.wallet.feature_account_impl.presentation.pincode.PincodeFragment"
+        android:name="com.edgeverse.wallet.feature_account_impl.presentation.pincode.PincodeFragment"
         android:label="fragment_pincode"
         tools:layout="@layout/fragment_pincode" />
 

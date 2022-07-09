@@ -53,7 +53,7 @@
             android:textColor="@color/white"
             tools:text="Honeybird" />
 
-        <com.dfinn.wallet.feature_nft_impl.presentation.nft.common.NftIssuanceView
+        <com.edgeverse.wallet.feature_nft_impl.presentation.nft.common.NftIssuanceView
             android:id="@+id/itemNftIssuance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

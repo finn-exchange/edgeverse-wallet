@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:background="@color/black">
 
-    <com.dfinn.wallet.common.view.Toolbar
+    <com.edgeverse.wallet.common.view.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:dividerVisible="false"
@@ -24,7 +24,7 @@
         android:layout_marginEnd="16dp"
         android:text="@string/dapp_authorized_description" />
 
-    <com.dfinn.wallet.common.view.TableCellView
+    <com.edgeverse.wallet.common.view.TableCellView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/authorizedDAppsWallet"
@@ -40,7 +40,7 @@
         android:layout_height="1dp"
         android:layout_weight="1" />
 
-    <com.dfinn.wallet.common.view.PlaceholderView
+    <com.edgeverse.wallet.common.view.PlaceholderView
         android:layout_width="match_parent"
         app:showBackground="false"
         app:image="@drawable/ic_placeholder"

@@ -1,4 +1,4 @@
-package com.dfinn.wallet
+package com.edgeverse.wallet
 
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider

@@ -1,4 +1,4 @@
-package com.dfinn.wallet.core_db.dao
+package com.edgeverse.wallet.core_db.dao
 
 import com.dfinn.wallet.common.utils.CollectionDiffer
 import com.dfinn.wallet.core.model.CryptoType

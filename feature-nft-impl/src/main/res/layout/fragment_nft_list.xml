@@ -33,7 +33,7 @@
             android:gravity="center"
             android:text="@string/nft_your_nfts" />
 
-        <com.dfinn.wallet.common.view.CounterView
+        <com.edgeverse.wallet.common.view.CounterView
             android:id="@+id/nftListCounter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

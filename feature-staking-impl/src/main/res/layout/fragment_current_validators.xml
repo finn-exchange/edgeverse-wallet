@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:background="@color/black">
 
-    <com.dfinn.wallet.common.view.Toolbar
+    <com.edgeverse.wallet.common.view.Toolbar
         android:id="@+id/currentValidatorsToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         app:textRight="@string/common_change"
         app:titleText="@string/staking_your_validators" />
 
-    <com.dfinn.wallet.common.view.AlertView
+    <com.edgeverse.wallet.common.view.AlertView
         android:id="@+id/currentValidatorsOversubscribedMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.dfinn.wallet.feature_staking_impl.presentation.staking.main.view.StakingInfoView
+            <com.edgeverse.wallet.feature_staking_impl.presentation.staking.main.view.StakingInfoView
                 android:id="@+id/stakingBalanceInfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp" />
 
-            <com.dfinn.wallet.feature_staking_impl.presentation.staking.main.view.ManageStakingActionView
+            <com.edgeverse.wallet.feature_staking_impl.presentation.staking.main.view.ManageStakingActionView
                 android:id="@+id/stakingBalanceActions"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
@@ -39,7 +39,7 @@
 
     </ScrollView>
 
-    <com.dfinn.wallet.common.view.Toolbar
+    <com.edgeverse.wallet.common.view.Toolbar
         android:id="@+id/stakingBalanceToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

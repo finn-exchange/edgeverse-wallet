@@ -23,7 +23,7 @@
             android:src="@drawable/ic_close"
             app:tint="@color/actions_color" />
 
-        <com.dfinn.wallet.feature_dapp_impl.presentation.browser.main.view.AddressBarView
+        <com.edgeverse.wallet.feature_dapp_impl.presentation.browser.main.view.AddressBarView
             android:id="@+id/dappBrowserAddressBar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

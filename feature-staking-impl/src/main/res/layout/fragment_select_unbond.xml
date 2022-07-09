@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:background="@color/black">
 
-    <com.dfinn.wallet.common.view.Toolbar
+    <com.edgeverse.wallet.common.view.Toolbar
         android:id="@+id/unbondToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         app:homeButtonIcon="@drawable/ic_close"
         app:titleText="@string/staking_unbond_v1_9_0" />
 
-    <com.dfinn.wallet.feature_wallet_api.presentation.view.amount.ChooseAmountView
+    <com.edgeverse.wallet.feature_wallet_api.presentation.view.amount.ChooseAmountView
         android:id="@+id/unbondAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp" />
 
-    <com.dfinn.wallet.common.view.TableCellView
+    <com.edgeverse.wallet.common.view.TableCellView
         android:id="@+id/unbondTransferable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
         android:layout_marginEnd="16dp"
         app:dividerVisible="false" />
 
-    <com.dfinn.wallet.feature_wallet_api.presentation.view.FeeView
+    <com.edgeverse.wallet.feature_wallet_api.presentation.view.FeeView
         android:id="@+id/unbondFee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         android:layout_marginEnd="16dp"
         app:dividerVisible="false" />
 
-    <com.dfinn.wallet.common.mixin.hints.HintsView
+    <com.edgeverse.wallet.common.mixin.hints.HintsView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/unbondHints"
@@ -55,7 +55,7 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <com.dfinn.wallet.common.view.PrimaryButton
+    <com.edgeverse.wallet.common.view.PrimaryButton
         android:id="@+id/unbondContinue"
         style="@style/Widget.Nova.Button.Primary"
         android:layout_width="match_parent"

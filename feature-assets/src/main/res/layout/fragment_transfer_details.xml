@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:background="@color/black">
 
-    <com.dfinn.wallet.common.view.Toolbar
+    <com.edgeverse.wallet.common.view.Toolbar
         android:id="@+id/transactionDetailToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,14 +59,14 @@
                 tools:text="completed"
                 tools:textColor="@color/green" />
 
-            <com.dfinn.wallet.common.view.TableView
+            <com.edgeverse.wallet.common.view.TableView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp">
 
-                <com.dfinn.wallet.common.view.TableCellView
+                <com.edgeverse.wallet.common.view.TableCellView
                     android:id="@+id/transactionDetailFrom"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -74,36 +74,36 @@
                     app:primaryValueIconTint="@color/white_64"
                     app:title="@string/wallet_sender" />
 
-                <com.dfinn.wallet.common.view.TableCellView
+                <com.edgeverse.wallet.common.view.TableCellView
                     android:id="@+id/transactionDetailNetwork"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:title="@string/common_network" />
 
-                <com.dfinn.wallet.common.view.TableCellView
+                <com.edgeverse.wallet.common.view.TableCellView
                     android:id="@+id/transactionDetailFee"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:title="@string/network_fee" />
-            </com.dfinn.wallet.common.view.TableView>
+            </com.edgeverse.wallet.common.view.TableView>
 
-            <com.dfinn.wallet.common.view.TableView
+            <com.edgeverse.wallet.common.view.TableView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="16dp">
 
-                <com.dfinn.wallet.common.view.TableCellView
+                <com.edgeverse.wallet.common.view.TableCellView
                     android:id="@+id/transactionDetailTo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:primaryValueIcon="@drawable/ic_info_16"
                     app:primaryValueIconTint="@color/white_64"
                     app:title="@string/wallet_recipient" />
-            </com.dfinn.wallet.common.view.TableView>
+            </com.edgeverse.wallet.common.view.TableView>
 
-            <com.dfinn.wallet.common.view.TableView
+            <com.edgeverse.wallet.common.view.TableView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -111,19 +111,19 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="16dp">
 
-                <com.dfinn.wallet.common.view.TableCellView
+                <com.edgeverse.wallet.common.view.TableCellView
                     android:id="@+id/transactionDetailHash"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:primaryValueIcon="@drawable/ic_info_16"
                     app:primaryValueIconTint="@color/white_64"
                     app:title="@string/common_transaction_id" />
-            </com.dfinn.wallet.common.view.TableView>
+            </com.edgeverse.wallet.common.view.TableView>
         </LinearLayout>
 
     </ScrollView>
 
-    <com.dfinn.wallet.common.view.PrimaryButton
+    <com.edgeverse.wallet.common.view.PrimaryButton
         android:id="@+id/transactionDetailRepeat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

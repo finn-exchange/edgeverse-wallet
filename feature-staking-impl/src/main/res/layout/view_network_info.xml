@@ -39,35 +39,35 @@
         android:paddingBottom="12dp"
         app:layout_constraintTop_toBottomOf="@id/stakingNetworkInfo">
 
-        <com.dfinn.wallet.common.view.TableCellView
+        <com.edgeverse.wallet.common.view.TableCellView
             android:id="@+id/stakingAboutTotalStake"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:dividerColor="@color/white_8"
             app:title="@string/staking_total_staked" />
 
-        <com.dfinn.wallet.common.view.TableCellView
+        <com.edgeverse.wallet.common.view.TableCellView
             android:id="@+id/stakingAboutMinimumStake"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:dividerColor="@color/white_8"
             app:title="@string/staking_main_minimum_stake_title" />
 
-        <com.dfinn.wallet.common.view.TableCellView
+        <com.edgeverse.wallet.common.view.TableCellView
             android:id="@+id/stakingAboutActiveNominators"
             android:layout_width="match_parent"
             app:dividerColor="@color/white_8"
             android:layout_height="wrap_content"
             app:title="@string/staking_main_active_nominators_title" />
 
-        <com.dfinn.wallet.common.view.TableCellView
+        <com.edgeverse.wallet.common.view.TableCellView
             android:id="@+id/stakingAboutStakingPeriod"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:dividerColor="@color/white_8"
             app:title="@string/staking_staking_period" />
 
-        <com.dfinn.wallet.common.view.TableCellView
+        <com.edgeverse.wallet.common.view.TableCellView
             android:id="@+id/stakingAboutUnstakingPeriod"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

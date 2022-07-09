@@ -1,4 +1,4 @@
-package com.dfinn.wallet.core_db.dao
+package com.edgeverse.wallet.core_db.dao
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.dfinn.wallet.core_db.AppDatabase

@@ -8,14 +8,14 @@
     android:orientation="vertical"
     tools:background="@color/black">
 
-    <com.dfinn.wallet.common.view.Toolbar
+    <com.edgeverse.wallet.common.view.Toolbar
         android:id="@+id/confirmSendToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:dividerVisible="false"
         app:titleText="@string/wallet_asset_send" />
 
-    <com.dfinn.wallet.feature_wallet_api.presentation.view.amount.PrimaryAmountView
+    <com.edgeverse.wallet.feature_wallet_api.presentation.view.amount.PrimaryAmountView
         android:id="@+id/confirmSendAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,26 +23,26 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp" />
 
-    <com.dfinn.wallet.common.view.TableView
+    <com.edgeverse.wallet.common.view.TableView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp">
 
-        <com.dfinn.wallet.common.view.TableCellView
+        <com.edgeverse.wallet.common.view.TableCellView
             android:id="@+id/confirmSendNetwork"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:title="@string/common_network" />
 
-        <com.dfinn.wallet.common.view.TableCellView
+        <com.edgeverse.wallet.common.view.TableCellView
             android:id="@+id/confirmSendWallet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:title="@string/tabbar_wallet_title" />
 
-        <com.dfinn.wallet.common.view.TableCellView
+        <com.edgeverse.wallet.common.view.TableCellView
             android:id="@+id/confirmSendSender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,21 +50,21 @@
             app:primaryValueIconTint="@color/white_64"
             app:title="@string/wallet_sender" />
 
-        <com.dfinn.wallet.feature_wallet_api.presentation.view.FeeView
+        <com.edgeverse.wallet.feature_wallet_api.presentation.view.FeeView
             android:id="@+id/confirmSendFee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-    </com.dfinn.wallet.common.view.TableView>
+    </com.edgeverse.wallet.common.view.TableView>
 
-    <com.dfinn.wallet.common.view.TableView
+    <com.edgeverse.wallet.common.view.TableView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp">
 
-        <com.dfinn.wallet.common.view.TableCellView
+        <com.edgeverse.wallet.common.view.TableCellView
             android:id="@+id/confirmSendRecipient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,14 +72,14 @@
             app:primaryValueIconTint="@color/white_64"
             app:title="@string/wallet_recipient" />
 
-    </com.dfinn.wallet.common.view.TableView>
+    </com.edgeverse.wallet.common.view.TableView>
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <com.dfinn.wallet.common.view.PrimaryButton
+    <com.edgeverse.wallet.common.view.PrimaryButton
         android:id="@+id/confirmSendConfirm"
         style="@style/Widget.Nova.Button.Primary"
         android:layout_width="match_parent"

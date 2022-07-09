@@ -15,7 +15,7 @@
         android:background="@color/bar_bg_64"
         android:orientation="horizontal">
 
-        <com.dfinn.wallet.common.view.SearchView
+        <com.edgeverse.wallet.common.view.SearchView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"

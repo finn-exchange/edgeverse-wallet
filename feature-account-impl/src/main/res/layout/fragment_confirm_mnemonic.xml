@@ -8,7 +8,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <com.dfinn.wallet.common.view.Toolbar
+    <com.edgeverse.wallet.common.view.Toolbar
         android:id="@+id/confirmMnemonicToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
                 android:text="@string/account_confirm_mnemonic_subtitle"
                 android:textColor="@color/black1" />
 
-            <com.dfinn.wallet.feature_account_impl.presentation.mnemonic.confirm.view.MnemonicContainerView
+            <com.edgeverse.wallet.feature_account_impl.presentation.mnemonic.confirm.view.MnemonicContainerView
                 android:id="@+id/confirmMnemonicDestination"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
                 tools:layout_height="144dp"
                 tools:listitem="@layout/item_confirm_mnemonic_word" />
 
-            <com.dfinn.wallet.feature_account_impl.presentation.mnemonic.confirm.view.MnemonicContainerView
+            <com.edgeverse.wallet.feature_account_impl.presentation.mnemonic.confirm.view.MnemonicContainerView
                 android:id="@+id/confirmMnemonicSource"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -77,7 +77,7 @@
     </androidx.core.widget.NestedScrollView>
 
 
-    <com.dfinn.wallet.common.view.PrimaryButton
+    <com.edgeverse.wallet.common.view.PrimaryButton
         android:id="@+id/conformMnemonicSkip"
         style="@style/Widget.Nova.Button.Secondary"
         android:layout_width="match_parent"
@@ -91,7 +91,7 @@
         app:layout_constraintEnd_toEndOf="@+id/nextBtn"
         app:layout_constraintStart_toStartOf="@+id/nextBtn" />
 
-    <com.dfinn.wallet.common.view.PrimaryButton
+    <com.edgeverse.wallet.common.view.PrimaryButton
         android:id="@+id/conformMnemonicContinue"
         style="@style/Widget.Nova.Button.Primary"
         android:layout_width="match_parent"

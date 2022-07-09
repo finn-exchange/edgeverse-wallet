@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:background="@color/black">
 
-    <com.dfinn.wallet.common.view.Toolbar
+    <com.edgeverse.wallet.common.view.Toolbar
         android:id="@+id/accountDetailsToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         app:homeButtonIcon="@drawable/ic_close"
         app:titleText="@string/wallet_chain_management_title" />
 
-    <com.dfinn.wallet.common.view.InputField
+    <com.edgeverse.wallet.common.view.InputField
         android:id="@+id/accountDetailsNameField"
         style="@style/Widget.Nova.Input.Primary.External"
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:id="@+id/accountDetailsChainAccounts"
         android:layout_height="match_parent"
-        app:layoutManager="com.dfinn.wallet.common.view.recyclerview.LinearLayoutManagerFixed"
+        app:layoutManager="com.edgeverse.wallet.common.view.recyclerview.LinearLayoutManagerFixed"
         android:layout_marginTop="16dp"
         tools:listitem="@layout/item_chain_acount" />
 

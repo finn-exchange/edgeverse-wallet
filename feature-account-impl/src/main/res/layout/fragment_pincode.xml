@@ -5,7 +5,7 @@
     android:background="@color/black"
     android:fitsSystemWindows="true">
 
-    <com.dfinn.wallet.common.view.Toolbar
+    <com.edgeverse.wallet.common.view.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintVertical_chainStyle="packed" />
 
-    <com.dfinn.wallet.feature_account_impl.presentation.pincode.view.DotsProgressView
+    <com.edgeverse.wallet.feature_account_impl.presentation.pincode.view.DotsProgressView
         android:id="@+id/pincodeProgress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pinCodeTitle" />
 
-    <com.dfinn.wallet.feature_account_impl.presentation.pincode.view.PinCodeView
+    <com.edgeverse.wallet.feature_account_impl.presentation.pincode.view.PinCodeView
         android:id="@+id/pinCodeNumbers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

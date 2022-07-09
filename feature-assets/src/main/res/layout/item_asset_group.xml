@@ -10,7 +10,7 @@
     android:paddingBottom="9dp"
     tools:background="@color/black_48">
 
-    <com.dfinn.wallet.feature_account_api.view.ChainChipView
+    <com.edgeverse.wallet.feature_account_api.view.ChainChipView
         android:id="@+id/itemAssetGroupChain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
