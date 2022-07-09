@@ -1,0 +1,7 @@
+package com.edgeverse.wallet.feature_account_impl.domain.account.export.json.validations
+
+import com.edgeverse.wallet.common.validation.Validation
+import com.edgeverse.wallet.common.validation.ValidationSystem
+
+typealias ExportJsonPasswordValidationSystem = ValidationSystem<ExportJsonPasswordValidationPayload, ExportJsonPasswordValidationFailure>
+typealias ExportJsonPasswordValidation = Validation<ExportJsonPasswordValidationPayload, ExportJsonPasswordValidationFailure>

@@ -1,9 +1,0 @@
-package com.dfinn.wallet.feature_crowdloan_impl.domain.contribute.validations
-
-import com.dfinn.wallet.common.validation.Validation
-import com.dfinn.wallet.feature_wallet_api.domain.validation.EnoughToPayFeesValidation
-import com.dfinn.wallet.feature_wallet_api.domain.validation.ExistentialDepositValidation
-
-typealias ContributeValidation = Validation<ContributeValidationPayload, ContributeValidationFailure>
-typealias ContributeEnoughToPayFeesValidation = EnoughToPayFeesValidation<ContributeValidationPayload, ContributeValidationFailure>
-typealias ContributeExistentialDepositValidation = ExistentialDepositValidation<ContributeValidationPayload, ContributeValidationFailure>

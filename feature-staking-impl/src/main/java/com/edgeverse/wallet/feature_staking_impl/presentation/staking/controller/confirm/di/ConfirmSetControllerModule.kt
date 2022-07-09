@@ -1,0 +1,64 @@
+package com.edgeverse.wallet.feature_staking_impl.presentation.staking.controller.confirm.di
+
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import dagger.Module
+import dagger.Provides
+import dagger.multibindings.IntoMap
+import com.edgeverse.wallet.common.address.AddressIconGenerator
+import com.edgeverse.wallet.common.di.viewmodel.ViewModelKey
+import com.edgeverse.wallet.common.di.viewmodel.ViewModelModule
+import com.edgeverse.wallet.common.resources.ResourceManager
+import com.edgeverse.wallet.common.validation.ValidationExecutor
+import com.edgeverse.wallet.feature_account_api.presenatation.account.wallet.WalletUiUseCase
+import com.edgeverse.wallet.feature_account_api.presenatation.actions.ExternalActions
+import com.edgeverse.wallet.feature_staking_impl.data.StakingSharedState
+import com.edgeverse.wallet.feature_staking_impl.domain.StakingInteractor
+import com.edgeverse.wallet.feature_staking_impl.domain.staking.controller.ControllerInteractor
+import com.edgeverse.wallet.feature_staking_impl.domain.validations.controller.SetControllerValidationSystem
+import com.edgeverse.wallet.feature_staking_impl.presentation.StakingRouter
+import com.edgeverse.wallet.feature_staking_impl.presentation.staking.controller.confirm.ConfirmSetControllerPayload
+import com.edgeverse.wallet.feature_staking_impl.presentation.staking.controller.confirm.ConfirmSetControllerViewModel
+
+@Module(includes = [ViewModelModule::class])
+class ConfirmSetControllerModule {
+    @Provides
+    @IntoMap
+    @ViewModelKey(ConfirmSetControllerViewModel::class)
+    fun provideViewModule(
+        router: StakingRouter,
+        controllerInteractor: ControllerInteractor,
+        addressIconGenerator: AddressIconGenerator,
+        payload: ConfirmSetControllerPayload,
+        interactor: StakingInteractor,
+        resourceManager: ResourceManager,
+        externalActions: ExternalActions.Presentation,
+        validationExecutor: ValidationExecutor,
+        validationSystem: SetControllerValidationSystem,
+        singleAssetSharedState: StakingSharedState,
+        walletUiUseCase: WalletUiUseCase
+    ): ViewModel {
+        return ConfirmSetControllerViewModel(
+            router = router,
+            controllerInteractor = controllerInteractor,
+            addressIconGenerator = addressIconGenerator,
+            payload = payload,
+            interactor = interactor,
+            resourceManager = resourceManager,
+            externalActions = externalActions,
+            validationExecutor = validationExecutor,
+            validationSystem = validationSystem,
+            selectedAssetState = singleAssetSharedState,
+            walletUiUseCase = walletUiUseCase
+        )
+    }
+
+    @Provides
+    fun provideViewModelCreator(
+        fragment: Fragment,
+        viewModelFactory: ViewModelProvider.Factory
+    ): ConfirmSetControllerViewModel {
+        return ViewModelProvider(fragment, viewModelFactory).get(ConfirmSetControllerViewModel::class.java)
+    }
+}

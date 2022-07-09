@@ -1,7 +1,0 @@
-package com.dfinn.wallet.feature_account_impl.domain.account.advancedEncryption.valiadtion
-
-import com.dfinn.wallet.common.validation.Validation
-import com.dfinn.wallet.common.validation.ValidationSystem
-
-typealias AdvancedEncryptionValidationSystem = ValidationSystem<AdvancedEncryptionValidationPayload, AdvancedEncryptionValidationFailure>
-typealias AdvancedEncryptionValidation = Validation<AdvancedEncryptionValidationPayload, AdvancedEncryptionValidationFailure>

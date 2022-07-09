@@ -1,0 +1,80 @@
+package com.edgeverse.wallet.feature_dapp_impl.web3.polkadotJs
+
+import android.util.Log
+import com.google.gson.Gson
+import com.edgeverse.wallet.common.utils.LOG_TAG
+import com.edgeverse.wallet.common.utils.parseArbitraryObject
+import com.edgeverse.wallet.feature_dapp_impl.web3.Web3Responder
+import com.edgeverse.wallet.feature_dapp_impl.web3.polkadotJs.model.mapRawPayloadToSignerPayloadJSON
+import com.edgeverse.wallet.feature_dapp_impl.web3.polkadotJs.model.mapRawPayloadToSignerPayloadRaw
+import com.edgeverse.wallet.feature_dapp_impl.web3.webview.WebViewWeb3JavaScriptInterface
+import com.edgeverse.wallet.feature_dapp_impl.web3.webview.WebViewWeb3Transport
+import kotlinx.coroutines.CoroutineScope
+
+class PolkadotJsTransportFactory(
+    private val web3Responder: Web3Responder,
+    private val webViewWeb3JavaScriptInterface: WebViewWeb3JavaScriptInterface,
+    private val gson: Gson,
+) {
+
+    fun create(scope: CoroutineScope): PolkadotJsTransport {
+        return PolkadotJsTransport(
+            webViewWeb3JavaScriptInterface = webViewWeb3JavaScriptInterface,
+            scope = scope,
+            gson = gson,
+            web3Responder = web3Responder,
+        )
+    }
+}
+
+class PolkadotJsTransport(
+    private val gson: Gson,
+    private val web3Responder: Web3Responder,
+    webViewWeb3JavaScriptInterface: WebViewWeb3JavaScriptInterface,
+    scope: CoroutineScope,
+) : WebViewWeb3Transport<PolkadotJsTransportRequest<*>>(scope, webViewWeb3JavaScriptInterface) {
+
+    override suspend fun messageToRequest(message: String): PolkadotJsTransportRequest<*>? {
+        Log.d(LOG_TAG, message)
+
+        val parsedMessage = gson.parseArbitraryObject(message)!!
+
+        val url = parsedMessage["url"] as? String ?: return null
+        val requestId = parsedMessage["id"] as? String ?: return null
+
+        return when (parsedMessage["msgType"]) {
+            PolkadotJsTransportRequest.Identifier.AUTHORIZE_TAB.id ->
+                PolkadotJsTransportRequest.Single.AuthorizeTab(web3Responder, url)
+
+            PolkadotJsTransportRequest.Identifier.LIST_ACCOUNTS.id ->
+                PolkadotJsTransportRequest.Single.ListAccounts(web3Responder, url, gson)
+
+            PolkadotJsTransportRequest.Identifier.SIGN_EXTRINSIC.id -> {
+                val maybePayload = mapRawPayloadToSignerPayloadJSON(parsedMessage["request"], gson)
+
+                maybePayload?.let {
+                    PolkadotJsTransportRequest.Single.Sign.Extrinsic(web3Responder, url, requestId, maybePayload, gson)
+                }
+            }
+
+            PolkadotJsTransportRequest.Identifier.SIGN_BYTES.id -> {
+                val maybePayload = mapRawPayloadToSignerPayloadRaw(parsedMessage["request"], gson)
+
+                maybePayload?.let {
+                    PolkadotJsTransportRequest.Single.Sign.Bytes(web3Responder, url, requestId, maybePayload, gson)
+                }
+            }
+
+            PolkadotJsTransportRequest.Identifier.SUBSCRIBE_ACCOUNTS.id ->
+                PolkadotJsTransportRequest.Subscription.SubscribeAccounts(scope = this, requestId, web3Responder, url, gson)
+
+            PolkadotJsTransportRequest.Identifier.LIST_METADATA.id ->
+                PolkadotJsTransportRequest.Single.ListMetadata(web3Responder, url, gson)
+
+            PolkadotJsTransportRequest.Identifier.PROVIDE_METADATA.id ->
+                PolkadotJsTransportRequest.Single.ProvideMetadata(web3Responder, url)
+
+            else -> null
+        }
+    }
+}

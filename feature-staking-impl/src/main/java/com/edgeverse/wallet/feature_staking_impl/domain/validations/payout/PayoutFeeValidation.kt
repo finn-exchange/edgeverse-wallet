@@ -1,0 +1,5 @@
+package com.edgeverse.wallet.feature_staking_impl.domain.validations.payout
+
+import com.edgeverse.wallet.feature_wallet_api.domain.validation.EnoughToPayFeesValidation
+
+typealias PayoutFeeValidation = EnoughToPayFeesValidation<MakePayoutPayload, PayoutValidationFailure>

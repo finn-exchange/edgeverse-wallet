@@ -1,7 +1,0 @@
-package com.dfinn.wallet.feature_staking_impl.domain.validations.welcome
-
-import com.dfinn.wallet.common.validation.ValidationSystem
-import com.dfinn.wallet.feature_staking_impl.domain.validations.MaxNominatorsReachedValidation
-
-typealias WelcomeStakingValidationSystem = ValidationSystem<WelcomeStakingValidationPayload, WelcomeStakingValidationFailure>
-typealias WelcomeStakingMaxNominatorsValidation = MaxNominatorsReachedValidation<WelcomeStakingValidationPayload, WelcomeStakingValidationFailure>

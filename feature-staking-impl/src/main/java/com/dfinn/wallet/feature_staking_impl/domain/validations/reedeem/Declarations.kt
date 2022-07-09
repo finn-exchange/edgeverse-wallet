@@ -1,7 +1,0 @@
-package com.dfinn.wallet.feature_staking_impl.domain.validations.reedeem
-
-import com.dfinn.wallet.common.validation.ValidationSystem
-import com.dfinn.wallet.feature_wallet_api.domain.validation.EnoughToPayFeesValidation
-
-typealias RedeemFeeValidation = EnoughToPayFeesValidation<RedeemValidationPayload, RedeemValidationFailure>
-typealias RedeemValidationSystem = ValidationSystem<RedeemValidationPayload, RedeemValidationFailure>

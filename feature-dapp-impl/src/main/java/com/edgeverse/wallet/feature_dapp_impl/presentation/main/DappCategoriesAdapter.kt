@@ -1,0 +1,77 @@
+package com.edgeverse.wallet.feature_dapp_impl.presentation.main
+
+import android.view.View
+import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
+import com.edgeverse.wallet.common.list.PayloadGenerator
+import com.edgeverse.wallet.common.list.resolvePayload
+import com.edgeverse.wallet.common.utils.inflateChild
+import com.edgeverse.wallet.feature_dapp_impl.R
+import com.edgeverse.wallet.feature_dapp_impl.presentation.main.model.DAppCategoryModel
+import kotlinx.android.extensions.LayoutContainer
+import kotlinx.android.synthetic.main.item_dapp_category.view.itemDappCategory
+
+class DappCategoriesAdapter(
+    private val handler: Handler,
+) : ListAdapter<DAppCategoryModel, DappCategoryViewHolder>(DappDiffCallback) {
+
+    interface Handler {
+
+        fun onItemClicked(id: String)
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DappCategoryViewHolder {
+        return DappCategoryViewHolder(parent.inflateChild(R.layout.item_dapp_category), handler)
+    }
+
+    override fun onBindViewHolder(holder: DappCategoryViewHolder, position: Int, payloads: MutableList<Any>) {
+        val item = getItem(position)
+
+        resolvePayload(holder, position, payloads) {
+            when (it) {
+                DAppCategoryModel::selected -> holder.bindSelected(item.selected)
+            }
+        }
+    }
+
+    override fun onBindViewHolder(holder: DappCategoryViewHolder, position: Int) {
+        holder.bind(getItem(position))
+    }
+}
+
+private val dAppCategoryPayloadGenerator = PayloadGenerator(DAppCategoryModel::selected)
+
+private object DappDiffCallback : DiffUtil.ItemCallback<DAppCategoryModel>() {
+
+    override fun areItemsTheSame(oldItem: DAppCategoryModel, newItem: DAppCategoryModel): Boolean {
+        return oldItem.id == newItem.id
+    }
+
+    override fun areContentsTheSame(oldItem: DAppCategoryModel, newItem: DAppCategoryModel): Boolean {
+        return oldItem == newItem
+    }
+
+    override fun getChangePayload(oldItem: DAppCategoryModel, newItem: DAppCategoryModel): Any? {
+        return dAppCategoryPayloadGenerator.diff(oldItem, newItem)
+    }
+}
+
+class DappCategoryViewHolder(
+    override val containerView: View,
+    private val itemHandler: DappCategoriesAdapter.Handler,
+) : RecyclerView.ViewHolder(containerView), LayoutContainer {
+
+    fun bind(item: DAppCategoryModel) = with(containerView) {
+        itemDappCategory.text = item.name
+
+        bindSelected(item.selected)
+
+        containerView.setOnClickListener { itemHandler.onItemClicked(item.id) }
+    }
+
+    fun bindSelected(isSelected: Boolean) = with(containerView) {
+        itemDappCategory.isSelected = isSelected
+    }
+}

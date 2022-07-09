@@ -1,0 +1,9 @@
+package com.edgeverse.wallet.feature_staking_impl.domain.validations.bond
+
+import com.edgeverse.wallet.common.validation.ValidationSystem
+import com.edgeverse.wallet.feature_wallet_api.domain.validation.EnoughToPayFeesValidation
+import com.edgeverse.wallet.feature_wallet_api.domain.validation.PositiveAmountValidation
+
+typealias BondMoreFeeValidation = EnoughToPayFeesValidation<BondMoreValidationPayload, BondMoreValidationFailure>
+typealias NotZeroBondValidation = PositiveAmountValidation<BondMoreValidationPayload, BondMoreValidationFailure>
+typealias BondMoreValidationSystem = ValidationSystem<BondMoreValidationPayload, BondMoreValidationFailure>

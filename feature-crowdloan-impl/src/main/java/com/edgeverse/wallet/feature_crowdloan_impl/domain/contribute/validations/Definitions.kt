@@ -1,0 +1,9 @@
+package com.edgeverse.wallet.feature_crowdloan_impl.domain.contribute.validations
+
+import com.edgeverse.wallet.common.validation.Validation
+import com.edgeverse.wallet.feature_wallet_api.domain.validation.EnoughToPayFeesValidation
+import com.edgeverse.wallet.feature_wallet_api.domain.validation.ExistentialDepositValidation
+
+typealias ContributeValidation = Validation<ContributeValidationPayload, ContributeValidationFailure>
+typealias ContributeEnoughToPayFeesValidation = EnoughToPayFeesValidation<ContributeValidationPayload, ContributeValidationFailure>
+typealias ContributeExistentialDepositValidation = ExistentialDepositValidation<ContributeValidationPayload, ContributeValidationFailure>

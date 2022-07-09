@@ -1,0 +1,11 @@
+package com.edgeverse.wallet.feature_staking_impl.domain.validations.rebond
+
+import com.edgeverse.wallet.common.validation.Validation
+import com.edgeverse.wallet.common.validation.ValidationSystem
+import com.edgeverse.wallet.feature_wallet_api.domain.validation.PositiveAmountValidation
+import com.edgeverse.wallet.feature_wallet_api.domain.validation.EnoughToPayFeesValidation
+
+typealias RebondFeeValidation = EnoughToPayFeesValidation<RebondValidationPayload, RebondValidationFailure>
+typealias NotZeroRebondValidation = PositiveAmountValidation<RebondValidationPayload, RebondValidationFailure>
+typealias RebondValidation = Validation<RebondValidationPayload, RebondValidationFailure>
+typealias RebondValidationSystem = ValidationSystem<RebondValidationPayload, RebondValidationFailure>

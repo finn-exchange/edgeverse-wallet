@@ -1,0 +1,9 @@
+package com.edgeverse.wallet.feature_staking_impl.domain.validations.rewardDestination
+
+import com.edgeverse.wallet.common.validation.ValidationSystem
+import com.edgeverse.wallet.feature_staking_impl.domain.validations.AccountRequiredValidation
+import com.edgeverse.wallet.feature_wallet_api.domain.validation.EnoughToPayFeesValidation
+
+typealias RewardDestinationFeeValidation = EnoughToPayFeesValidation<RewardDestinationValidationPayload, RewardDestinationValidationFailure>
+typealias RewardDestinationControllerRequiredValidation = AccountRequiredValidation<RewardDestinationValidationPayload, RewardDestinationValidationFailure>
+typealias RewardDestinationValidationSystem = ValidationSystem<RewardDestinationValidationPayload, RewardDestinationValidationFailure>

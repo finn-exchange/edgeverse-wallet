@@ -1,9 +1,0 @@
-package com.dfinn.wallet.feature_staking_impl.domain.validations.controller
-
-import com.dfinn.wallet.common.validation.ValidationSystem
-import com.dfinn.wallet.feature_staking_impl.domain.validations.AccountIsNotControllerValidation
-import com.dfinn.wallet.feature_wallet_api.domain.validation.EnoughToPayFeesValidation
-
-typealias SetControllerFeeValidation = EnoughToPayFeesValidation<SetControllerValidationPayload, SetControllerValidationFailure>
-typealias IsNotControllerAccountValidation = AccountIsNotControllerValidation<SetControllerValidationPayload, SetControllerValidationFailure>
-typealias SetControllerValidationSystem = ValidationSystem<SetControllerValidationPayload, SetControllerValidationFailure>
