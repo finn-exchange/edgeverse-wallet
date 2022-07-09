@@ -4,7 +4,7 @@ buildscript {
         versionName = '1.0.1'
         versionCode = 1
 
-        applicationId = "com.dfinn.wallet"
+        applicationId = "com.edgeverse.wallet"
         releaseApplicationSuffix = "market"
 
         // SDK and tools

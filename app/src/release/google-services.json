@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:802342409053:android:36a2e33c10baf1b7378eb4",
         "android_client_info": {
-          "package_name": "com.dfinn.wallet"
+          "package_name": "com.edgeverse.wallet"
         }
       },
       "oauth_client": [
@@ -38,7 +38,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:802342409053:android:a2a4a7704637d695378eb4",
         "android_client_info": {
-          "package_name": "com.dfinn.wallet.github"
+          "package_name": "com.edgeverse.wallet.github"
         }
       },
       "oauth_client": [
@@ -67,7 +67,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:802342409053:android:4adac8797277d19d378eb4",
         "android_client_info": {
-          "package_name": "com.dfinn.wallet.market"
+          "package_name": "com.edgeverse.wallet.market"
         }
       },
       "oauth_client": [
